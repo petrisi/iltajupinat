@@ -120,7 +120,7 @@
   </g>
 
   <!-- Seasonal mood arrows -->
-  <g transform="translate(30, 370)">
+  <g transform="translate(30, 365)">
     <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">↓ TALVI</text>
     <text x="250" y="0" font-family="Arial, sans-serif" font-size="10" fill="#66ee66">↑ KESÄ</text>
     <text x="480" y="0" font-family="Arial, sans-serif" font-size="10" fill="#DC0000">↓ TALVI</text>
@@ -129,7 +129,7 @@
   <!-- Bottom warning box -->
   <g transform="translate(15, 390)">
     <rect x="0" y="0" width="570" height="30" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1"/>
-    <text x="285" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" fill="#DC0000" filter="url(#glowRed)">⚠ PALJASTUS: Hyvinvointi nousee vain mökillä — loput 11 kk bonuspisteitä ⚠</text>
+    <text x="285" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" fill="#ff6666" filter="url(#glowRed)">⚠ PALJASTUS: Hyvinvointi nousee vain mökillä — loput 11 kk bonuspisteitä ⚠</text>
   </g>
 
   <!-- Source credit -->

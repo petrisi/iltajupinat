@@ -95,7 +95,7 @@
   <!-- Warning box -->
   <g transform="translate(15, 370)">
     <rect x="0" y="0" width="570" height="40" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
-    <text x="285" y="25" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#DC0000" filter="url(#glowRed)" letter-spacing="1">⚠ VAROITUS: Krokotiilimäärä kasvaa 400 % vuodessa — älä ylläty ⚠</text>
+    <text x="285" y="25" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#ff6666" filter="url(#glowRed)" letter-spacing="1">⚠ VAROITUS: Krokotiilimäärä kasvaa 400 % vuodessa — älä ylläty ⚠</text>
   </g>
 
   <!-- Source credit -->

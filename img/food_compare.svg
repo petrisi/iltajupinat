@@ -63,7 +63,7 @@
 
   <!-- ===== LEFT PANEL: Kotikatsa ===== -->
   <g transform="translate(30, 130)">
-    <rect x="0" y="0" width="250" height="240" rx="10" fill="#1a1a1a" stroke="#6AB283" stroke-width="3"/>
+    <rect x="0" y="0" width="250" height="245" rx="10" fill="#1a1a1a" stroke="#6AB283" stroke-width="3"/>
     <!-- Panel header -->
     <rect x="0" y="0" width="250" height="38" rx="10" fill="url(#kotikatsaGrad)"/>
     <rect x="0" y="18" width="250" height="20" fill="url(#kotikatsaGrad)"/>
@@ -95,7 +95,7 @@
 
   <!-- ===== RIGHT PANEL: Ravintola ===== -->
   <g transform="translate(320, 130)">
-    <rect x="0" y="0" width="250" height="240" rx="10" fill="#1a1a1a" stroke="#DC0000" stroke-width="3"/>
+    <rect x="0" y="0" width="250" height="245" rx="10" fill="#1a1a1a" stroke="#DC0000" stroke-width="3"/>
     <!-- Panel header -->
     <rect x="0" y="0" width="250" height="38" rx="10" fill="url(#ravintolaGrad)"/>
     <rect x="0" y="18" width="250" height="20" fill="url(#ravintolaGrad)"/>

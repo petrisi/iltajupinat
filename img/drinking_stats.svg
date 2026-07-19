@@ -117,7 +117,7 @@
   <!-- Muuta 0% - special callout -->
   <g filter="url(#shadow)">
     <rect x="140" y="380" width="220" height="28" rx="4" fill="#333333" stroke="#888888" stroke-width="1"/>
-    <text class="legend-label" x="250" y="399" text-anchor="middle" fill="#BBBBBB">Muuta: 0% ...ei yllätys</text>
+    <text class="legend-label" x="250" y="399" text-anchor="middle" fill="#DDDDDD">Muuta: 0% ...ei yllätys</text>
   </g>
 
   <!-- Dramatic bottom accent line -->

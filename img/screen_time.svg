@@ -70,9 +70,9 @@
 
     <!-- Row 2: Nuoret (13-17v) 6h15min = 375min (height=320) -->
     <text x="0" y="58" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Nuoret (13-17v)</text>
-    <rect x="140" y="46" width="320" height="24" rx="4" fill="#222244"/>
-    <rect x="140" y="46" width="320" height="24" rx="4" fill="url(#bar2)" filter="url(#glowRed)"/>
-    <text x="480" y="63" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">6h 15min/päivä</text>
+    <rect x="140" y="46" width="310" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="46" width="310" height="24" rx="4" fill="url(#bar2)" filter="url(#glowRed)"/>
+    <text x="465" y="63" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">6h 15min/päivä</text>
     <!-- SKANDAALI arrow -->
     <text x="470" y="38" font-family="Impact, sans-serif" font-size="10" fill="#DC0000" filter="url(#glowRed)">▼ REKORDI!</text>
 
@@ -98,7 +98,7 @@
 
   <!-- Fun fact box -->
   <g transform="translate(20, 310)">
-    <rect x="0" y="0" width="560" height="38" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
+    <rect x="0" y="0" width="560" height="40" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
     <text x="280" y="16" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00" filter="url(#glowYellow)">OHO! Suomalainen viettää keskimäärin 17h 15min vuorokaudessa ruudun edessä</text>
     <text x="280" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">— vain unessa on enemmän aikaa</text>
   </g>

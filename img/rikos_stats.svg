@@ -107,8 +107,8 @@
 
   <!-- Info box -->
   <g transform="translate(20, 350)">
-    <rect x="0" y="0" width="560" height="35" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
-    <text x="280" y="16" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#DC0000" filter="url(#glowRed)">⚠ VAROITUS: Pullavarkaudet nousseet 300 % — syy: korvapuustikriisi ⚠</text>
+    <rect x="0" y="0" width="560" height="38" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
+    <text x="280" y="16" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#ff6666" filter="url(#glowRed)">⚠ VAROITUS: Pullavarkaudet nousseet 300 % — syy: korvapuustikriisi ⚠</text>
     <text x="280" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Kukkakauppa-huijaus: myytiin leikkokukkia, toimitettu lehtiä</text>
   </g>
 

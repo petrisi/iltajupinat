@@ -49,8 +49,8 @@
 
     <!-- Bar 1: Yksinäiset miehet - 347 -->
     <text x="0" y="20" class="label">Yksinäiset miehet</text>
-    <rect x="160" y="6" width="280" height="28" rx="2" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
-    <text x="448" y="26" class="value">347</text>
+    <rect x="160" y="6" width="267" height="28" rx="2" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="430" y="26" class="value">347</text>
 
     <!-- Bar 2: Humalassa - 189 -->
     <text x="0" y="60" class="label">Humalassa</text>
@@ -75,9 +75,9 @@
   </g>
 
   <!-- Yellow bottom accent bar -->
-  <rect x="0" y="380" width="600" height="8" fill="#FFEB00"/>
+  <rect x="0" y="376" width="600" height="8" fill="#FFEB00"/>
 
   <!-- Disclaimer -->
-  <text x="300" y="396" text-anchor="middle" class="disclaimer">Lähteet: Täysin keksittyjä lukuja</text>
+  <text x="300" y="392" text-anchor="middle" class="disclaimer">Lähteet: Täysin keksittyjä lukuja</text>
 
 </svg>
