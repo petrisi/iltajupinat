@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <!-- Gradient for header -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#A04191"/>
+      <stop offset="50%" style="stop-color:#DC0000"/>
+      <stop offset="100%" style="stop-color:#A04191"/>
+    </linearGradient>
+    <!-- Gradient for SKANDAALI banner -->
+    <linearGradient id="scandalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC0000"/>
+      <stop offset="100%" style="stop-color:#8B0000"/>
+    </linearGradient>
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Glow filter for SKANDAALI -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Clip path for rounded header -->
+    <clipPath id="headerClip">
+      <rect x="0" y="0" width="600" height="90" rx="0"/>
+    </clipPath>
+    <!-- Dress icon template -->
+    <g id="dressIcon">
+      <path d="M8,0 L14,0 L16,6 L12,6 L14,18 L4,18 L6,6 L2,6 Z" fill="#FFEB00" stroke="#A04191" stroke-width="1.2"/>
+      <path d="M5,6 L13,6" stroke="#A04191" stroke-width="1"/>
+    </g>
+    <!-- Row background gradient -->
+    <linearGradient id="rowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D1B30"/>
+      <stop offset="100%" style="stop-color:#1A0F20"/>
+    </linearGradient>
+    <linearGradient id="rowGradAlt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3D2040"/>
+      <stop offset="100%" style="stop-color:#251530"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" fill="#1A0F20" rx="8"/>
+
+  <!-- Decorative border -->
+  <rect x="4" y="4" width="592" height="492" fill="none" stroke="#A04191" stroke-width="3" rx="6"/>
+  <rect x="10" y="10" width="580" height="480" fill="none" stroke="#DC0000" stroke-width="1" rx="4"/>
+
+  <!-- Header background -->
+  <rect x="0" y="0" width="600" height="90" fill="url(#headerGrad)"/>
+  <!-- Header bottom border -->
+  <line x1="0" y1="90" x2="600" y2="90" stroke="#FFEB00" stroke-width="3"/>
+
+  <!-- Decorative stars in header -->
+  <text x="30" y="45" fill="#FFEB00" font-size="18" font-weight="bold">★</text>
+  <text x="560" y="45" fill="#FFEB00" font-size="18" font-weight="bold">★</text>
+  <text x="50" y="70" fill="#FFEB00" font-size="14" font-weight="bold">✦</text>
+  <text x="540" y="70" fill="#FFEB00" font-size="14" font-weight="bold">✦</text>
+
+  <!-- Crown icon in header -->
+  <g transform="translate(285, 8)">
+    <path d="M0,25 L-15,10 L-10,20 L-5,5 L0,15 L5,5 L10,20 L15,10 Z" fill="#FFEB00" stroke="#8B6914" stroke-width="1"/>
+    <circle cx="-15" cy="10" r="3" fill="#DC0000"/>
+    <circle cx="0" cy="5" r="3" fill="#DC0000"/>
+    <circle cx="15" cy="10" r="3" fill="#DC0000"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="300" y="30" text-anchor="middle" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="22" font-weight="900" letter-spacing="2" filter="url(#shadow)">
+    KUNINKAALLISTEN
+  </text>
+  <text x="300" y="55" text-anchor="middle" fill="#FFFFFF" font-family="'Arial Black', Arial, sans-serif" font-size="26" font-weight="900" letter-spacing="3" filter="url(#shadow)">
+    PUKUKATASTROFIT
+  </text>
+
+  <!-- Subtitle -->
+  <text x="300" y="78" text-anchor="middle" fill="#FFEB00" font-family="Arial, sans-serif" font-size="13" font-weight="bold" letter-spacing="1">
+    MITÄ NÄITÄ KASVOJA EI KERTONUT!
+  </text>
+
+  <!-- SKANDAALI! burst label -->
+  <g transform="translate(520, 118)" filter="url(#glow)">
+    <!-- Starburst shape -->
+    <polygon points="
+      0,-35
+      10,-12
+      35,-10
+      18,5
+      28,30
+      5,18
+      0,40
+      -5,18
+      -28,30
+      -18,5
+      -35,-10
+      -10,-12
+    " fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="13" font-weight="900">SKANDAALI!</text>
+  </g>
+
+  <!-- Row 1: Prinsessa Diana -->
+  <g transform="translate(0, 100)">
+    <rect x="15" y="0" width="570" height="65" rx="6" fill="url(#rowGrad)" stroke="#A04191" stroke-width="1.5"/>
+    <text x="25" y="40" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900">1</text>
+    <use href="#dressIcon" x="42" y="10"/>
+    <text x="72" y="28" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Prinsessa Diana</text>
+    <text x="72" y="48" fill="#DC0000" font-family="Arial, sans-serif" font-size="12">Mustat mekko — 1994 — "Se oli vastaus"</text>
+    <!-- Drama meter -->
+    <rect x="470" y="12" width="90" height="12" rx="3" fill="#333"/>
+    <rect x="470" y="12" width="85" height="12" rx="3" fill="#DC0000"/>
+    <text x="515" y="22" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold">SKALA 10/10</text>
+  </g>
+
+  <!-- Row 2: Meghan Markle -->
+  <g transform="translate(0, 170)">
+    <rect x="15" y="0" width="570" height="65" rx="6" fill="url(#rowGradAlt)" stroke="#A04191" stroke-width="1.5"/>
+    <text x="25" y="40" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900">2</text>
+    <use href="#dressIcon" x="42" y="10"/>
+    <text x="72" y="28" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Meghan Markle</text>
+    <text x="72" y="48" fill="#DC0000" font-family="Arial, sans-serif" font-size="12">Palm Beach -puku — 2018 — "Kuka suunnitteli sen?"</text>
+    <rect x="470" y="12" width="90" height="12" rx="3" fill="#333"/>
+    <rect x="470" y="12" width="75" height="12" rx="3" fill="#DC0000"/>
+    <text x="515" y="22" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold">SKALA 9/10</text>
+  </g>
+
+  <!-- Row 3: Kruununprinsessa Victoria -->
+  <g transform="translate(0, 240)">
+    <rect x="15" y="0" width="570" height="65" rx="6" fill="url(#rowGrad)" stroke="#A04191" stroke-width="1.5"/>
+    <text x="25" y="40" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900">3</text>
+    <use href="#dressIcon" x="42" y="10"/>
+    <text x="72" y="28" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Kruununprinsessa Victoria</text>
+    <text x="72" y="48" fill="#DC0000" font-family="Arial, sans-serif" font-size="12">Liian lyhyt — 2022 — "Ruotsi järkyttyi"</text>
+    <rect x="470" y="12" width="90" height="12" rx="3" fill="#333"/>
+    <rect x="470" y="12" width="65" height="12" rx="3" fill="#DC0000"/>
+    <text x="515" y="22" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold">SKALA 8/10</text>
+  </g>
+
+  <!-- Row 4: Prinsessa Kate -->
+  <g transform="translate(0, 310)">
+    <rect x="15" y="0" width="570" height="65" rx="6" fill="url(#rowGradAlt)" stroke="#A04191" stroke-width="1.5"/>
+    <text x="25" y="40" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900">4</text>
+    <use href="#dressIcon" x="42" y="10"/>
+    <text x="72" y="28" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Prinsessa Kate</text>
+    <text x="72" y="48" fill="#DC0000" font-family="Arial, sans-serif" font-size="12">Sama mekko — 2023 — "Kolmannen kerran!"</text>
+    <rect x="470" y="12" width="90" height="12" rx="3" fill="#333"/>
+    <rect x="470" y="12" width="55" height="12" rx="3" fill="#DC0000"/>
+    <text x="515" y="22" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold">SKALA 7/10</text>
+  </g>
+
+  <!-- Row 5: Herttua Catherine -->
+  <g transform="translate(0, 380)">
+    <rect x="15" y="0" width="570" height="65" rx="6" fill="url(#rowGrad)" stroke="#A04191" stroke-width="1.5"/>
+    <text x="25" y="40" fill="#FFEB00" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900">5</text>
+    <use href="#dressIcon" x="42" y="10"/>
+    <text x="72" y="28" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Herttua Catherine</text>
+    <text x="72" y="48" fill="#DC0000" font-family="Arial, sans-serif" font-size="12">Punaista liian paljon — 2024 — "Väri ei sovi"</text>
+    <rect x="470" y="12" width="90" height="12" rx="3" fill="#333"/>
+    <rect x="470" y="12" width="45" height="12" rx="3" fill="#DC0000"/>
+    <text x="515" y="22" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="bold">SKALA 6/10</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="458" width="600" height="42" fill="#0D0714"/>
+  <line x1="0" y1="458" x2="600" y2="458" stroke="#A04191" stroke-width="2"/>
+  <text x="300" y="484" text-anchor="middle" fill="#C060B0" font-family="Arial, sans-serif" font-size="11" font-weight="bold" letter-spacing="2">
+    ILTAJUPINAT · SUOMEN KOVIMMAT PALJASTUKSET · © 2025
+  </text>
+
+  <!-- Decorative corner elements -->
+  <path d="M15,15 L35,15 L35,18 L18,18 L18,35 L15,35 Z" fill="#FFEB00"/>
+  <path d="M585,15 L565,15 L565,18 L582,18 L582,35 L585,35 Z" fill="#FFEB00"/>
+  <path d="M15,485 L35,485 L35,482 L18,482 L18,465 L15,465 Z" fill="#FFEB00"/>
+  <path d="M585,485 L565,485 L565,482 L582,482 L582,465 L585,465 Z" fill="#FFEB00"/>
+</svg>

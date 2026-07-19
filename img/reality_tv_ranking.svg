@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@700&amp;display=swap');
+      .title { font-family: 'Anton', Impact, sans-serif; font-size: 22px; fill: #FFEB00; }
+      .rank-num { font-family: 'Anton', Impact, sans-serif; font-size: 28px; fill: #FFEB00; }
+      .show-name { font-family: 'Oswald', 'Arial Black', sans-serif; font-size: 15px; font-weight: 700; fill: #FFFFFF; }
+      .viewers { font-family: 'Oswald', 'Arial Black', sans-serif; font-size: 14px; font-weight: 700; fill: #FFEB00; }
+      .tagline { font-family: 'Arial', sans-serif; font-size: 11px; font-style: italic; fill: #FFD6D6; }
+      .paljastus { font-family: 'Anton', Impact, sans-serif; font-size: 20px; fill: #FFFFFF; }
+    </style>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#FF4444"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A04191"/>
+      <stop offset="100%" stop-color="#C76BBF"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7B2D82"/>
+      <stop offset="100%" stop-color="#A04191"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5A1D6E"/>
+      <stop offset="100%" stop-color="#7B2D82"/>
+    </linearGradient>
+    <linearGradient id="bar5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D1455"/>
+      <stop offset="100%" stop-color="#5A1D6E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" rx="8" fill="#1A0A2E"/>
+  <rect x="2" y="2" width="596" height="496" rx="8" fill="none" stroke="#DC0000" stroke-width="3"/>
+  <rect x="6" y="6" width="588" height="488" rx="6" fill="none" stroke="#FFEB00" stroke-width="1"/>
+
+  <!-- Decorative corner elements -->
+  <polygon points="6,50 30,50 6,74" fill="#FFEB00" opacity="0.6"/>
+  <polygon points="594,50 570,50 594,74" fill="#FFEB00" opacity="0.6"/>
+  <polygon points="6,450 30,450 6,474" fill="#FFEB00" opacity="0.6"/>
+  <polygon points="594,450 570,450 594,474" fill="#FFEB00" opacity="0.6"/>
+
+  <!-- PALJASTUS! label -->
+  <g transform="translate(300, 38)" filter="url(#shadow)">
+    <polygon points="-100,-18 100,-18 110,0 100,18 -100,18 -110,0" fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
+    <text class="paljastus" text-anchor="middle" dominant-baseline="middle" filter="url(#glow)">PALJASTUS!</text>
+  </g>
+
+  <!-- Main title -->
+  <text class="title" text-anchor="middle" x="300" y="72" filter="url(#shadow)">SUOMEN KATSOJETUIMMAT</text>
+  <text class="title" text-anchor="middle" x="300" y="96" filter="url(#shadow)">TOTUUSOHJELMAT</text>
+  <line x1="100" y1="105" x2="500" y2="105" stroke="#FFEB00" stroke-width="2"/>
+  <line x1="100" y1="108" x2="500" y2="108" stroke="#DC0000" stroke-width="1"/>
+
+  <!-- Bar chart area -->
+  <!-- Max viewers: 908000 -> max bar width: 340px -->
+  <!-- Scale: 340 / 908000 = 0.0003745 px per viewer -->
+
+  <!-- Row 1: Tanssii tähtien kanssa — 908 000 -->
+  <g transform="translate(0, 118)">
+    <text class="rank-num" x="22" y="20">1</text>
+    <text class="show-name" x="48" y="14">Tanssii tähtien kanssa</text>
+    <text class="viewers" x="48" y="30">908 000 katsojaa</text>
+    <text class="tagline" x="48" y="43">"Kunnon huipulla ja kyynelten keskellä"</text>
+    <rect x="48" y="48" width="340" height="6" rx="3" fill="url(#bar1)" filter="url(#glow)"/>
+    <circle cx="388" cy="51" r="4" fill="#FFEB00"/>
+  </g>
+
+  <!-- Row 2: Selviytyjät Suomi — 612 000 -->
+  <g transform="translate(0, 175)">
+    <text class="rank-num" x="22" y="20">2</text>
+    <text class="show-name" x="48" y="14">Selviytyjät Suomi</text>
+    <text class="viewers" x="48" y="30">612 000 katsojaa</text>
+    <text class="tagline" x="48" y="43">"Ketä syödään tänään?"</text>
+    <rect x="48" y="48" width="229" height="6" rx="3" fill="url(#bar2)" filter="url(#glow)"/>
+    <circle cx="277" cy="51" r="4" fill="#FFEB00"/>
+  </g>
+
+  <!-- Row 3: Love Island Suomi — 523 000 -->
+  <g transform="translate(0, 232)">
+    <text class="rank-num" x="22" y="20">3</text>
+    <text class="show-name" x="48" y="14">Love Island Suomi</text>
+    <text class="viewers" x="48" y="30">523 000 katsojaa</text>
+    <text class="tagline" x="48" y="43">"Kuka nukkuu kenen kanssa?"</text>
+    <rect x="48" y="48" width="196" height="6" rx="3" fill="url(#bar3)" filter="url(#glow)"/>
+    <circle cx="244" cy="51" r="4" fill="#FFEB00"/>
+  </g>
+
+  <!-- Row 4: Big Brother Suomi — 445 000 -->
+  <g transform="translate(0, 289)">
+    <text class="rank-num" x="22" y="20">4</text>
+    <text class="show-name" x="48" y="14">Big Brother Suomi</text>
+    <text class="viewers" x="48" y="30">445 000 katsojaa</text>
+    <text class="tagline" x="48" y="43">"Vanhin mutta ei parhaita"</text>
+    <rect x="48" y="48" width="167" height="6" rx="3" fill="url(#bar4)" filter="url(#glow)"/>
+    <circle cx="215" cy="51" r="4" fill="#FFEB00"/>
+  </g>
+
+  <!-- Row 5: Talent Suomi — 198 000 -->
+  <g transform="translate(0, 346)">
+    <text class="rank-num" x="22" y="20">5</text>
+    <text class="show-name" x="48" y="14">Talent Suomi</text>
+    <text class="viewers" x="48" y="30">198 000 katsojaa</text>
+    <text class="tagline" x="48" y="43">"Joku osaa aina laulaa"</text>
+    <rect x="48" y="48" width="74" height="6" rx="3" fill="url(#bar5)" filter="url(#glow)"/>
+    <circle cx="122" cy="51" r="4" fill="#FFEB00"/>
+  </g>
+
+  <!-- Bottom banner -->
+  <rect x="50" y="407" width="500" height="40" rx="4" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
+  <text font-family="'Anton', Impact, sans-serif" font-size="13" fill="#FFEB00" text-anchor="middle" x="300" y="424">LÄHDE: Ilta-Jupinatin salainen katsojalaskuri © 2025</text>
+
+  <!-- Dramatic starbursts -->
+  <g transform="translate(540, 120)" opacity="0.5">
+    <polygon points="0,-15 4,-4 15,0 4,4 0,15 -4,4 -15,0 -4,-4" fill="#FFEB00"/>
+  </g>
+  <g transform="translate(540, 350)" opacity="0.5">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#FFEB00"/>
+  </g>
+  <g transform="translate(540, 240)" opacity="0.4">
+    <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#FFEB00"/>
+  </g>
+</svg>

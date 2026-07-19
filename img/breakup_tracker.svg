@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Dramatic glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Red bar gradient -->
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="100%" stop-color="#DC0000"/>
+    </linearGradient>
+    <!-- Explosion gradient for record bar -->
+    <linearGradient id="recordGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="50%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FF4444"/>
+    </linearGradient>
+    <!-- Yellow highlight glow -->
+    <filter id="yellowGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#FFEB00" flood-opacity="0.7"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <!-- Starburst clip -->
+    <clipPath id="starburst">
+      <circle cx="490" cy="55" r="45"/>
+    </clipPath>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="600" height="450" fill="#1A1A1A"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06">
+    <line x1="0" y1="100" x2="600" y2="100" stroke="#FFEB00" stroke-width="1"/>
+    <line x1="0" y1="150" x2="600" y2="150" stroke="#FFEB00" stroke-width="1"/>
+    <line x1="0" y1="200" x2="600" y2="200" stroke="#FFEB00" stroke-width="1"/>
+    <line x1="0" y1="250" x2="600" y2="250" stroke="#FFEB00" stroke-width="1"/>
+    <line x1="0" y1="300" x2="600" y2="300" stroke="#FFEB00" stroke-width="1"/>
+  </g>
+
+  <!-- Yellow top border strip -->
+  <rect x="0" y="0" width="600" height="6" fill="#FFEB00"/>
+  <!-- Red accent strip -->
+  <rect x="0" y="6" width="600" height="3" fill="#DC0000"/>
+
+  <!-- ===== TITLE AREA ===== -->
+  <!-- Title background panel -->
+  <rect x="30" y="18" width="540" height="52" rx="4" fill="#DC0000" stroke="#FFEB00" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Main title -->
+  <text x="300" y="42" text-anchor="middle" font-family="'Arial Black', 'Impact', 'Helvetica', sans-serif" font-size="22" font-weight="900" fill="#FFEB00" letter-spacing="2" filter="url(#glow)">JULKISEROT 2025</text>
+  <text x="300" y="62" text-anchor="middle" font-family="'Arial Black', 'Impact', 'Helvetica', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="3">— ERONEN VUOSI —</text>
+
+  <!-- ===== SHOKKI! STAR BURST ===== -->
+  <g transform="translate(510, 75)" filter="url(#yellowGlow)">
+    <!-- Starburst shape -->
+    <polygon points="0,-42 10,-15 35,-18 18,2 42,12 16,14 22,38 2,18 -12,42 -8,16 -35,18 -14,-2 -42,-12 -16,-14 -22,-38 -2,-18"
+             fill="#FFEB00" stroke="#DC0000" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-size="14" font-weight="900" fill="#1A1A1A">SHOKKI!</text>
+  </g>
+
+  <!-- ===== CHART AREA ===== -->
+  <!-- Chart background -->
+  <rect x="40" y="82" width="520" height="290" rx="6" fill="#222222" stroke="#DC0000" stroke-width="2" opacity="0.9"/>
+
+  <!-- Y-axis labels and grid lines -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#888888" text-anchor="end">
+    <text x="68" y="367">0</text>
+    <line x1="72" y1="364" x2="548" y2="364" stroke="#444" stroke-width="0.5"/>
+    <text x="68" y="317">1</text>
+    <line x1="72" y1="314" x2="548" y2="314" stroke="#444" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <text x="68" y="267">2</text>
+    <line x1="72" y1="264" x2="548" y2="264" stroke="#444" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <text x="68" y="217">3</text>
+    <line x1="72" y1="214" x2="548" y2="214" stroke="#444" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <text x="68" y="167">4</text>
+    <line x1="72" y1="164" x2="548" y2="164" stroke="#444" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <text x="68" y="117">5</text>
+    <line x1="72" y1="114" x2="548" y2="114" stroke="#444" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <text x="68" y="85" fill="#FFEB00">7</text>
+    <line x1="72" y1="79" x2="548" y2="79" stroke="#FFEB00" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>
+  </g>
+
+  <!-- Y-axis title -->
+  <text x="20" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#AAAAAA" transform="rotate(-90, 20, 225)">Eroja</text>
+
+  <!-- ===== BARS ===== -->
+  <!-- Scale: max value 7 maps to ~285px height. Each unit = 40.7px. Bar base Y = 364 -->
+  <!-- Tammikuu: 2 eroa → height 81 -->
+  <rect x="95" y="283" width="60" height="81" rx="3" fill="url(#barGrad)" stroke="#FF4444" stroke-width="1" filter="url(#shadow)"/>
+  <text x="125" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFEB00">2</text>
+  <text x="125" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC">Tammi</text>
+
+  <!-- Helmikuu: 5 eroa → height 203 -->
+  <rect x="175" y="161" width="60" height="203" rx="3" fill="url(#barGrad)" stroke="#FF4444" stroke-width="1" filter="url(#shadow)"/>
+  <text x="205" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFEB00">5</text>
+  <text x="205" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC">Helmi</text>
+  <!-- Valentine's bomb annotation -->
+  <g transform="translate(205, 140)">
+    <rect x="-55" y="-14" width="110" height="18" rx="4" fill="#FFEB00" opacity="0.9"/>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1A1A1A">💣 Valentinon pvm!</text>
+  </g>
+
+  <!-- Maaliskuu: 3 eroa → height 122 -->
+  <rect x="255" y="242" width="60" height="122" rx="3" fill="url(#barGrad)" stroke="#FF4444" stroke-width="1" filter="url(#shadow)"/>
+  <text x="285" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFEB00">3</text>
+  <text x="285" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC">Maalis</text>
+
+  <!-- Huhtikuu: 7 eroa (RECORD!) → height 285 -->
+  <rect x="335" y="79" width="60" height="285" rx="3" fill="url(#recordGrad)" stroke="#FFEB00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="365" y="72" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="20" font-weight="900" fill="#FFEB00" filter="url(#glow)">7</text>
+  <text x="365" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FFEB00" font-weight="bold">Huhti</text>
+  <!-- Record label -->
+  <g transform="translate(365, 58)">
+    <rect x="-30" y="-10" width="60" height="16" rx="3" fill="#FFEB00"/>
+    <text x="0" y="3" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="10" font-weight="900" fill="#DC0000">ENNÄTYS!</text>
+  </g>
+
+  <!-- Toukokuu: 4 eroa → height 162 -->
+  <rect x="415" y="202" width="60" height="162" rx="3" fill="url(#barGrad)" stroke="#FF4444" stroke-width="1" filter="url(#shadow)"/>
+  <text x="445" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFEB00">4</text>
+  <text x="445" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC">Touko</text>
+
+  <!-- Kesäkuu: 1 ero → height 40 -->
+  <rect x="495" y="324" width="60" height="40" rx="3" fill="url(#barGrad)" stroke="#FF4444" stroke-width="1" filter="url(#shadow)"/>
+  <text x="525" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFEB00">1</text>
+  <text x="525" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC">Kesä</text>
+  <!-- Summer annotation -->
+  <g transform="translate(525, 305)">
+    <rect x="-48" y="-12" width="96" height="16" rx="3" fill="#FFEB00" opacity="0.85"/>
+    <text x="0" y="1" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1A1A1A">kaikki mökeillä</text>
+  </g>
+
+  <!-- ===== TOTAL COUNTER ===== -->
+  <g transform="translate(300, 400)">
+    <rect x="-120" y="-14" width="240" height="28" rx="4" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="14" font-weight="900" fill="#FFEB00">YHTEENSÄ: 22 EROA — SUOMI ON PIENI!</text>
+  </g>
+
+  <!-- ===== BOTTOM TAGLINE ===== -->
+  <text x="300" y="438" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="#FFEB00" font-style="italic" filter="url(#glow)">
+    "Miksi niin monta? Koska Suomi on pieni."
+  </text>
+
+  <!-- Yellow bottom border strip -->
+  <rect x="0" y="444" width="600" height="6" fill="#FFEB00"/>
+</svg>

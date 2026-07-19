@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Decorative border -->
+  <rect x="4" y="4" width="592" height="492" rx="4" fill="none" stroke="#DC0000" stroke-width="4"/>
+  <rect x="10" y="10" width="580" height="480" rx="3" fill="none" stroke="#FFEB00" stroke-width="1.5"/>
+
+  <!-- PALJASTUS! banner -->
+  <g transform="translate(165, 10)" filter="url(#shadow)">
+    <polygon points="0,28 20,0 250,0 270,14 270,42 250,56 20,56 0,42" fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
+    <text x="135" y="35" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="22" font-weight="900" fill="#FFEB00" letter-spacing="2">PALJASTUS!</text>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="95" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="26" font-weight="900" fill="#FFEB00" filter="url(#shadow)">OLUTKARTTA</text>
+  <text x="300" y="118" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="1">— MITÄ SUOMALAISET JUOVAT —</text>
+
+  <!-- Finland outline shape - solid blue fill for visibility -->
+  <g transform="translate(300, 285)" filter="url(#shadow)">
+    <path d="
+      M -8,-155
+      C -10,-148 -14,-132 -16,-118
+      C -18,-104 -20,-90 -21,-78
+      C -22,-66 -24,-52 -26,-40
+      C -28,-28 -30,-16 -31,-4
+      C -32,8 -33,20 -33,32
+      C -33,44 -32,56 -30,68
+      C -28,80 -26,92 -24,104
+      C -22,114 -20,124 -18,134
+      C -16,144 -14,152 -12,158
+      L -8,162
+      C -4,166 0,168 4,166
+      C 8,164 12,160 16,154
+      C 20,148 24,140 26,130
+      C 28,120 30,110 31,100
+      C 32,90 34,80 35,70
+      C 36,60 38,50 39,40
+      C 40,30 41,20 42,10
+      C 43,0 43,-10 42,-20
+      C 41,-30 40,-40 38,-50
+      C 36,-60 34,-70 32,-80
+      C 30,-90 28,-100 26,-110
+      C 24,-120 22,-130 20,-140
+      C 18,-148 16,-154 14,-158
+      L 10,-160
+      C 6,-162 2,-162 -2,-160
+      C -6,-158 -8,-157 -8,-155
+      Z
+    " fill="#005070" stroke="#0084B4" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Region data points with circles and labels -->
+  <!-- Lappi (north) -->
+  <g transform="translate(290, 118)">
+    <circle r="24" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#fff">67%</text>
+    <line x1="28" y1="-4" x2="58" y2="-12" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="62" y="-8" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">LAPPI</text>
+    <text x="62" y="8" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Sisu-vodka"</text>
+  </g>
+
+  <!-- Oulu (north-center) -->
+  <g transform="translate(298, 182)">
+    <circle r="21" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="13" font-weight="900" fill="#fff">54%</text>
+    <line x1="26" y1="-4" x2="56" y2="-10" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="60" y="-6" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">OULU</text>
+    <text x="60" y="10" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Pohjanmaan olut"</text>
+  </g>
+
+  <!-- Tampere (center) -->
+  <g transform="translate(282, 262)">
+    <circle r="19" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="13" font-weight="900" fill="#fff">48%</text>
+    <line x1="24" y1="-4" x2="54" y2="-8" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="58" y="-4" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">TAMPERE</text>
+    <text x="58" y="12" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Tampereen stout"</text>
+  </g>
+
+  <!-- Turku (southwest) -->
+  <g transform="translate(252, 340)">
+    <circle r="17" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#fff">41%</text>
+    <line x1="-22" y1="-4" x2="-52" y2="-8" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="-56" y="-4" text-anchor="end" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">TURKU</text>
+    <text x="-56" y="12" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Ahvenanmaan viini"</text>
+  </g>
+
+  <!-- Helsinki (south-central) -->
+  <g transform="translate(290, 378)">
+    <circle r="15" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#fff">38%</text>
+    <line x1="20" y1="-4" x2="50" y2="-6" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="54" y="-2" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">HELSINKI</text>
+    <text x="54" y="12" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Kultaloukku ja siideri"</text>
+  </g>
+
+  <!-- Imatra (southeast) -->
+  <g transform="translate(345, 355)">
+    <circle r="13" fill="#DC0000" stroke="#FFEB00" stroke-width="2.5" filter="url(#glow)"/>
+    <text text-anchor="middle" y="5" font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#fff">29%</text>
+    <line x1="18" y1="-4" x2="48" y2="-6" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="52" y="-2" font-family="Arial Black, sans-serif" font-size="13" font-weight="700" fill="#FFEB00">IMATRA</text>
+    <text x="52" y="12" font-family="Arial, sans-serif" font-size="10" fill="#ccc">"Mänttä-viini"</text>
+  </g>
+
+  <!-- Bottom sensational banner -->
+  <g transform="translate(30, 435)" filter="url(#shadow)">
+    <rect x="0" y="0" width="540" height="42" rx="3" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="270" y="27" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="13" font-weight="900" fill="#FFEB00" letter-spacing="0.5">
+      LÄNNET JUO ENEMMÄN KUIN PÄÄKAUPUNKI — SELVITYS HÄMMÄSTI
+    </text>
+  </g>
+
+  <!-- Source footnote -->
+  <text x="300" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#999">Lähde: Iltajupinaten oma selvitys © 2025 · Ei todellinen tilastotieto</text>
+</svg>

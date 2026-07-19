@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="35%" stop-color="#FF8200"/>
+      <stop offset="70%" stop-color="#FFEB00"/>
+      <stop offset="100%" stop-color="#FFEB00"/>
+    </linearGradient>
+    <linearGradient id="zoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DC0000" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#FF8200" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFEB00" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="chartClip">
+      <rect x="80" y="100" width="460" height="260"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgGrad)" rx="8"/>
+
+  <!-- Red warning border top -->
+  <rect x="0" y="0" width="600" height="8" fill="#DC0000"/>
+
+  <!-- VAROITUS! banner -->
+  <rect x="150" y="14" width="300" height="32" fill="#DC0000" rx="4"/>
+  <text x="300" y="36" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="20" font-weight="900" fill="#FFEB00" letter-spacing="3" filter="url(#textGlow)">⚠ VAROITUS! ⚠</text>
+
+  <!-- Title -->
+  <text x="300" y="68" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" letter-spacing="1">KATSONUMMI-INDEXI</text>
+  <text x="300" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FF8200" font-weight="bold" letter-spacing="0.5">— KUIN KAIPAAT AURINKOA —</text>
+
+  <!-- Chart area background -->
+  <rect x="80" y="100" width="460" height="260" fill="#111111" rx="4" stroke="#333" stroke-width="1"/>
+
+  <!-- Color zone overlay (red top → yellow bottom) -->
+  <rect x="80" y="100" width="460" height="260" fill="url(#zoneGrad)" rx="4"/>
+
+  <!-- Grid lines -->
+  <g stroke="#2a2a2a" stroke-width="0.5" stroke-dasharray="4,4">
+    <!-- Horizontal grid lines at 20, 40, 60, 80, 100 -->
+    <line x1="80" y1="118" x2="540" y2="118"/>
+    <line x1="80" y1="154" x2="540" y2="154"/>
+    <line x1="80" y1="190" x2="540" y2="190"/>
+    <line x1="80" y1="226" x2="540" y2="226"/>
+    <line x1="80" y1="262" x2="540" y2="262"/>
+    <line x1="80" y1="298" x2="540" y2="298"/>
+    <line x1="80" y1="334" x2="540" y2="334"/>
+    <line x1="80" y1="360" x2="540" y2="360"/>
+  </g>
+
+  <!-- Y-axis labels -->
+  <g font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="end">
+    <text x="74" y="121">100</text>
+    <text x="74" y="157">80</text>
+    <text x="74" y="193">60</text>
+    <text x="74" y="229">40</text>
+    <text x="74" y="265">20</text>
+    <text x="74" y="301">10</text>
+    <text x="74" y="337">5</text>
+    <text x="74" y="363">0</text>
+  </g>
+
+  <!-- Danger zone label -->
+  <text x="540" y="115" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#DC0000" font-weight="bold">▼ KRIISI</text>
+  <text x="540" y="240" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#FF8200" font-weight="bold">▼ VAROITUS</text>
+  <text x="540" y="340" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#FFEB00" font-weight="bold">▼ OK</text>
+
+  <!-- Danger zone horizontal bands -->
+  <rect x="80" y="100" width="460" height="68" fill="#DC0000" opacity="0.08" rx="0"/>
+  <rect x="80" y="168" width="460" height="72" fill="#FF8200" opacity="0.06" rx="0"/>
+
+  <!-- Data points (x positions evenly spaced, y mapped from value)
+       Y mapping: value v → y = 360 - (v/100)*260
+       Joulukuu: 95 → y = 360 - 247 = 113
+       Tammikuu: 98 → y = 360 - 254.8 = 105.2
+       Helmikuu: 90 → y = 360 - 234 = 126
+       Maaliskuu: 72 → y = 360 - 187.2 = 172.8
+       Huhtikuu: 45 → y = 360 - 117 = 243
+       Toukokuu: 20 → y = 360 - 52 = 308
+       X positions: 120, 200, 280, 360, 440, 520
+  -->
+
+  <!-- Area fill under the curve -->
+  <polygon points="120,113 200,105.2 280,126 360,172.8 440,243 520,308 520,360 120,360"
+           fill="url(#lineGrad)" opacity="0.15" clip-path="url(#chartClip)"/>
+
+  <!-- Smooth curved line -->
+  <path d="M 120,113
+           C 160,108 160,102 200,105.2
+           C 240,109 240,123 280,126
+           C 320,129 320,170 360,172.8
+           C 400,176 400,240 440,243
+           C 480,246 480,305 520,308"
+        fill="none" stroke="url(#lineGrad)" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- Data point circles -->
+  <circle cx="120" cy="113" r="7" fill="#DC0000" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="200" cy="105.2" r="7" fill="#DC0000" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="280" cy="126" r="7" fill="#FF8200" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="360" cy="172.8" r="7" fill="#FF8200" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="440" cy="243" r="7" fill="#FFEB00" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="520" cy="308" r="7" fill="#FFEB00" stroke="#fff" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Value labels above/below points -->
+  <g font-family="'Arial Black', Impact, sans-serif" font-size="13" font-weight="900" text-anchor="middle">
+    <text x="120" y="100" fill="#DC0000" filter="url(#textGlow)">95</text>
+    <text x="200" y="92" fill="#DC0000" filter="url(#textGlow)">98</text>
+    <text x="280" y="113" fill="#FF8200" filter="url(#textGlow)">90</text>
+    <text x="360" y="160" fill="#FF8200" filter="url(#textGlow)">72</text>
+    <text x="440" y="230" fill="#FFEB00" filter="url(#textGlow)">45</text>
+    <text x="520" y="295" fill="#FFEB00" filter="url(#textGlow)">20</text>
+  </g>
+
+  <!-- Month labels on X axis -->
+  <g font-family="Arial, sans-serif" font-size="11" fill="#CCCCCC" font-weight="bold" text-anchor="middle">
+    <text x="120" y="380">Joulukuu</text>
+    <text x="200" y="380">Tammikuu</text>
+    <text x="280" y="380">Helmikuu</text>
+    <text x="360" y="380">Maaliskuu</text>
+    <text x="440" y="380">Huhtikuu</text>
+    <text x="520" y="380">Toukokuu</text>
+  </g>
+
+  <!-- Tagline labels near points -->
+  <g font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">
+    <text x="120" y="400" fill="#DC0000">"Tuskaa"</text>
+    <text x="200" y="400" fill="#DC0000">"Pimmin"</text>
+    <text x="280" y="400" fill="#FF8200">"Vielä pimeää"</text>
+    <text x="360" y="400" fill="#FF8200">"Toivoa?"</text>
+    <text x="440" y="400" fill="#FFEB00">"Väriä!"</text>
+    <text x="520" y="400" fill="#FFEB00">"Vapautta!"</text>
+  </g>
+
+  <!-- Source line -->
+  <text x="300" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999" font-style="italic">Lähde: Olen vain väsynyt</text>
+
+  <!-- Bottom red accent line -->
+  <rect x="0" y="442" width="600" height="8" fill="#DC0000" rx="0"/>
+</svg>
