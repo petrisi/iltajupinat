@@ -61,7 +61,7 @@
   </text>
 
   <!-- ===== TOSIASIA! Label ===== -->
-  <g transform="translate(300, 72)" filter="url(#glow)">
+  <g transform="translate(300, 67)" filter="url(#glow)">
     <polygon points="0,-16 30,-12 40,0 30,12 0,16 -30,12 -40,0 -30,-12" fill="#FFEB00" stroke="#FF6600" stroke-width="2"/>
     <text x="0" y="5" text-anchor="middle" font-family="Impact, 'Arial Black', Arial, sans-serif" font-size="16" font-weight="900" fill="#111" letter-spacing="3">
       TOSIASIA!
@@ -69,7 +69,7 @@
   </g>
 
   <!-- ===== VS divider line ===== -->
-  <line x1="295" y1="100" x2="295" y2="380" stroke="#FFEB00" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
+  <line x1="295" y1="100" x2="295" y2="325" stroke="#FFEB00" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
 
   <!-- ===== LEFT SIDE - HOCKEY ===== -->
   <rect x="15" y="100" width="270" height="4" rx="2" fill="#DC0000"/>
@@ -85,31 +85,31 @@
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Katsojia MM-kisoissa</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
     <rect x="0" y="18" width="250" height="18" rx="2" fill="#DC0000"/>
-    <text x="255" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">4,5 milj.</text>
+    <text x="265" y="31" text-anchor="end" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">4,5 milj.</text>
   </g>
 
   <!-- Urheilutoimittajia -->
-  <g transform="translate(15, 190)">
+  <g transform="translate(15, 196)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Urheilutoimittajia</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
     <rect x="0" y="18" width="240" height="18" rx="2" fill="#DC0000"/>
-    <text x="255" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">340</text>
+    <text x="265" y="31" text-anchor="end" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">340</text>
   </g>
 
   <!-- Palkkiot -->
-  <g transform="translate(15, 228)">
+  <g transform="translate(15, 240)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Palkkiot</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
     <rect x="0" y="18" width="245" height="18" rx="2" fill="#DC0000"/>
-    <text x="255" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">10M€</text>
+    <text x="265" y="31" text-anchor="end" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">10M€</text>
   </g>
 
   <!-- Kylmät sormet -->
-  <g transform="translate(15, 266)">
+  <g transform="translate(15, 284)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Kylmät sormet</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
     <rect x="0" y="18" width="255" height="18" rx="2" fill="#DC0000"/>
-    <text x="255" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">99%</text>
+    <text x="265" y="31" text-anchor="end" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">99%</text>
   </g>
 
   <!-- ===== RIGHT SIDE - FOOTBALL ===== -->
@@ -125,31 +125,31 @@
   <g transform="translate(315, 152)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Katsojia MM-kisoissa</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
-    <rect x="0" y="18" width="3" height="18" rx="1" fill="#0084B4"/>
+    <rect x="0" y="18" width="3" height="18" rx="2" fill="#0084B4"/>
     <text x="12" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">12</text>
   </g>
 
   <!-- Urheilutoimittajia -->
-  <g transform="translate(315, 190)">
+  <g transform="translate(315, 196)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Urheilutoimittajia</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
-    <rect x="0" y="18" width="5" height="18" rx="1" fill="#0084B4"/>
+    <rect x="0" y="18" width="5" height="18" rx="2" fill="#0084B4"/>
     <text x="14" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">3</text>
   </g>
 
   <!-- Palkkiot -->
-  <g transform="translate(315, 228)">
+  <g transform="translate(315, 240)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Palkkiot</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
-    <rect x="0" y="18" width="2" height="18" rx="1" fill="#0084B4"/>
+    <rect x="0" y="18" width="2" height="18" rx="2" fill="#0084B4"/>
     <text x="10" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#FFEB00" font-weight="900">500€</text>
   </g>
 
   <!-- Kylmät sormet -->
-  <g transform="translate(315, 266)">
+  <g transform="translate(315, 284)">
     <text x="0" y="14" font-family="Arial, sans-serif" font-size="11" fill="#ccc" font-weight="bold">Kylmät sormet</text>
     <rect x="0" y="18" width="260" height="18" rx="2" fill="#222" stroke="#555" stroke-width="1"/>
-    <rect x="0" y="18" width="0" height="18" rx="1" fill="#0084B4" opacity="0"/>
+    <rect x="0" y="18" width="0" height="18" rx="2" fill="#0084B4"/>
     <text x="0" y="31" font-family="Impact, Arial, sans-serif" font-size="14" fill="#888" font-weight="900">0%</text>
   </g>
 
@@ -163,7 +163,7 @@
   <text x="300" y="355" text-anchor="middle" font-family="Impact, 'Arial Black', Arial, sans-serif" font-size="20" font-weight="900" fill="#FFEB00" filter="url(#shadow)" letter-spacing="1">
     SUOMALAISET TIETÄÄN MITÄ HALUAT! 🇫🇮
   </text>
-  <text x="300" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888" font-style="italic">
+  <text x="300" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#aaa" font-style="italic">
     Lähde: Selvä juttu · Iltajupinat 2025
   </text>
 

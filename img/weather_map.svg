@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" width="600" height="540">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap');
-      .title { font-family: Impact, 'Arial Black', sans-serif; font-size: 38px; font-weight: 900; fill: #FFEB00; text-anchor: middle; letter-spacing: 2px; }
+      .title { font-family: Impact, 'Arial Black', sans-serif; font-size: 38px; fill: #FFFFFF; text-anchor: middle; letter-spacing: 2px; }
       .subtitle { font-family: Impact, 'Arial Black', sans-serif; font-size: 14px; fill: #FFFFFF; text-anchor: middle; letter-spacing: 1px; }
       .city-label { font-family: Impact, 'Arial Black', sans-serif; font-size: 13px; font-weight: 700; fill: #FFEB00; }
       .temp-label { font-family: Impact, 'Arial Black', sans-serif; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
-      .disclaimer { font-family: Impact, 'Arial Black', sans-serif; font-size: 12px; fill: #FFEB00; text-anchor: middle; }
+      .disclaimer { font-family: Impact, 'Arial Black', sans-serif; font-size: 12px; fill: #FFFFFF; text-anchor: middle; }
       .warning-text { font-family: Impact, 'Arial Black', sans-serif; font-size: 11px; fill: #DC0000; font-weight: 900; }
     </style>
     <filter id="glow">
@@ -37,43 +37,9 @@
       <stop offset="50%" stop-color="#FF2020"/>
       <stop offset="100%" stop-color="#DC0000"/>
     </linearGradient>
-  </defs>
 
-  <!-- Background -->
-  <rect width="600" height="450" fill="url(#bgGrad)"/>
-
-  <!-- Red border -->
-  <rect x="4" y="4" width="592" height="442" rx="4" fill="none" stroke="#DC0000" stroke-width="6"/>
-  <rect x="10" y="10" width="580" height="430" rx="2" fill="none" stroke="#DC0000" stroke-width="1.5" stroke-dasharray="8,4"/>
-
-  <!-- Top stripe warning bar -->
-  <rect x="10" y="10" width="580" height="28" fill="url(#stripe)"/>
-
-  <!-- Header bar -->
-  <rect x="10" y="42" width="580" height="48" rx="3" fill="url(#headerGrad)" stroke="#FFEB00" stroke-width="1"/>
-
-  <!-- Warning triangle left -->
-  <g transform="translate(30, 46)">
-    <polygon points="25,0 50,42 0,42" fill="#FFEB00" stroke="#DC0000" stroke-width="2"/>
-    <text x="25" y="36" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" font-weight="900" fill="#DC0000">!</text>
-  </g>
-
-  <!-- Warning triangle right -->
-  <g transform="translate(520, 46)">
-    <polygon points="25,0 50,42 0,42" fill="#FFEB00" stroke="#DC0000" stroke-width="2"/>
-    <text x="25" y="36" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" font-weight="900" fill="#DC0000">!</text>
-  </g>
-
-  <!-- Main title -->
-  <text class="title" x="300" y="76" filter="url(#shadow)">HUOMENEN SUOMESSA</text>
-
-  <!-- Subtitle -->
-  <text class="subtitle" x="300" y="94">⚠ HÄTÄILMOITUS — TARKISTA SÄÄ ENNUSTE ⚠</text>
-
-  <!-- Finland map silhouette (simplified elongated shape) -->
-  <g transform="translate(240, 110)" filter="url(#shadow)">
-    <!-- Main body of Finland -->
-    <path d="
+    <!-- Finland path data defined once -->
+    <path id="finland-shape" d="
       M 30,420
       L 20,390 L 15,360 L 18,330 L 12,300 L 10,270 L 15,240
       L 12,210 L 14,180 L 10,150 L 12,120 L 15,90
@@ -86,97 +52,121 @@
       L 78,290 L 75,310 L 78,330 L 75,350
       L 72,370 L 68,390 L 65,410 L 60,420
       L 55,422 L 45,420 L 35,420 Z
-    " fill="url(#finlandGrad)" stroke="#FFEB00" stroke-width="2.5"/>
+    "/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="540" fill="url(#bgGrad)"/>
+
+  <!-- Red border -->
+  <rect x="4" y="4" width="592" height="532" rx="4" fill="none" stroke="#DC0000" stroke-width="6"/>
+  <rect x="10" y="10" width="580" height="520" rx="2" fill="none" stroke="#DC0000" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <!-- Top stripe warning bar -->
+  <rect x="10" y="10" width="580" height="28" fill="url(#stripe)"/>
+
+  <!-- Header bar -->
+  <rect x="10" y="46" width="580" height="52" rx="3" fill="url(#headerGrad)" stroke="#FFEB00" stroke-width="1"/>
+
+  <!-- Warning triangle left -->
+  <g transform="translate(30, 50)">
+    <polygon points="25,0 50,42 0,42" fill="#FFEB00" stroke="#DC0000" stroke-width="2"/>
+    <text x="25" y="36" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" font-weight="900" fill="#DC0000">!</text>
+  </g>
+
+  <!-- Warning triangle right -->
+  <g transform="translate(520, 50)">
+    <polygon points="25,0 50,42 0,42" fill="#FFEB00" stroke="#DC0000" stroke-width="2"/>
+    <text x="25" y="36" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" font-weight="900" fill="#DC0000">!</text>
+  </g>
+
+  <!-- Main title -->
+  <text class="title" x="300" y="80" filter="url(#shadow)">HUOMENEN SUOMESSA</text>
+
+  <!-- Subtitle -->
+  <text class="subtitle" x="300" y="96">⚠ HÄTÄILMOITUS — TARKISTA SÄÄ ENNUSTE ⚠</text>
+
+  <!-- Finland map silhouette (simplified elongated shape) -->
+  <g transform="translate(240, 120)" filter="url(#shadow)">
+    <!-- Main body of Finland -->
+    <use href="#finland-shape" fill="url(#finlandGrad)" stroke="#FFEB00" stroke-width="2.5"/>
 
     <!-- White cross hint (Finnish flag reference) -->
     <line x1="42" y1="210" x2="68" y2="210" stroke="#FFFFFF" stroke-width="3" opacity="0.2"/>
     <line x1="55" y1="100" x2="55" y2="420" stroke="#FFFFFF" stroke-width="3" opacity="0.2"/>
 
     <!-- Glow effect on border -->
-    <path d="
-      M 30,420
-      L 20,390 L 15,360 L 18,330 L 12,300 L 10,270 L 15,240
-      L 12,210 L 14,180 L 10,150 L 12,120 L 15,90
-      L 18,60 L 20,30 L 25,10 L 30,0
-      L 35,5 L 40,10 L 42,20 L 40,30
-      L 45,40 L 50,50 L 55,55 L 60,60
-      L 65,70 L 70,85 L 72,100 L 70,115
-      L 75,130 L 78,150 L 75,170 L 80,190
-      L 82,210 L 78,230 L 80,250 L 75,270
-      L 78,290 L 75,310 L 78,330 L 75,350
-      L 72,370 L 68,390 L 65,410 L 60,420
-      L 55,422 L 45,420 L 35,420 Z
-    " fill="none" stroke="#FFEB00" stroke-width="1" opacity="0.5" filter="url(#glow)"/>
+    <use href="#finland-shape" fill="none" stroke="#FFEB00" stroke-width="1" opacity="0.5" filter="url(#glow)"/>
   </g>
 
   <!-- Weather markers and labels -->
   <!-- Rovaniemi (north) -->
-  <g transform="translate(250, 135)">
+  <g transform="translate(250, 145)">
     <circle cx="0" cy="0" r="8" fill="#FFEB00" stroke="#DC0000" stroke-width="2" filter="url(#glow)"/>
     <text x="12" y="-4" class="city-label">ROVANIEMI</text>
     <text x="12" y="12" class="temp-label">🍬 KARKKI +0°C</text>
   </g>
 
   <!-- Oulu (northwest middle) -->
-  <g transform="translate(225, 225)">
+  <g transform="translate(225, 235)">
     <circle cx="0" cy="0" r="8" fill="#FFEB00" stroke="#DC0000" stroke-width="2" filter="url(#glow)"/>
     <text x="-12" y="-4" class="city-label" text-anchor="end">OULU</text>
     <text x="-12" y="12" class="temp-label" text-anchor="end">🌫 SAVUSUMU +99°C</text>
   </g>
 
   <!-- Lappi (far north) -->
-  <g transform="translate(260, 115)">
+  <g transform="translate(260, 105)">
     <circle cx="0" cy="0" r="8" fill="#FFEB00" stroke="#DC0000" stroke-width="2" filter="url(#glow)"/>
     <text x="12" y="-4" class="city-label">LAPPI</text>
     <text x="12" y="12" class="temp-label">❄ LUMI +42°C</text>
   </g>
 
   <!-- Turku (southwest) -->
-  <g transform="translate(238, 340)">
+  <g transform="translate(238, 350)">
     <circle cx="0" cy="0" r="8" fill="#FFEB00" stroke="#DC0000" stroke-width="2" filter="url(#glow)"/>
     <text x="-12" y="-4" class="city-label" text-anchor="end">TURKU</text>
     <text x="-12" y="12" class="temp-label" text-anchor="end">☀ AURINKO +17°C</text>
   </g>
 
   <!-- Helsinki (southeast) -->
-  <g transform="translate(285, 370)">
+  <g transform="translate(285, 380)">
     <circle cx="0" cy="0" r="8" fill="#FFEB00" stroke="#DC0000" stroke-width="2" filter="url(#glow)"/>
     <text x="12" y="-4" class="city-label">HELSINKI</text>
     <text x="12" y="12" class="temp-label">⛈ MYRSKY +3°C</text>
   </g>
 
   <!-- Bottom warning bar -->
-  <rect x="10" y="400" width="580" height="38" rx="3" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
+  <rect x="10" y="488" width="580" height="38" rx="3" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
 
   <!-- Pulsing warning icon -->
-  <g transform="translate(20, 404)">
+  <g transform="translate(20, 492)">
     <polygon points="14,0 28,24 0,24" fill="#FFEB00" stroke="#0A0A0A" stroke-width="1"/>
     <text x="14" y="21" text-anchor="middle" font-family="Impact, sans-serif" font-size="16" font-weight="900" fill="#DC0000">!</text>
   </g>
 
   <!-- Disclaimer text -->
-  <text class="disclaimer" x="310" y="424" filter="url(#shadow)">
+  <text class="disclaimer" x="310" y="512" filter="url(#shadow)">
     HUOMAUTUS: Sään ennustaminen on vaikeampaa kuin näyttää
   </text>
 
   <!-- Decorative corner accents -->
   <!-- Top-left -->
-  <path d="M 10,40 L 40,40 L 40,10 L 10,10" fill="none" stroke="#FFEB00" stroke-width="2"/>
+  <path d="M 10,46 L 40,46 L 40,10 L 10,10" fill="none" stroke="#FFEB00" stroke-width="2"/>
   <!-- Top-right -->
-  <path d="M 590,40 L 560,40 L 560,10 L 590,10" fill="none" stroke="#FFEB00" stroke-width="2"/>
+  <path d="M 590,46 L 560,46 L 560,10 L 590,10" fill="none" stroke="#FFEB00" stroke-width="2"/>
   <!-- Bottom-left -->
-  <path d="M 10,410 L 40,410 L 40,440 L 10,440" fill="none" stroke="#FFEB00" stroke-width="2"/>
+  <path d="M 10,504 L 40,504 L 40,534 L 10,534" fill="none" stroke="#FFEB00" stroke-width="2"/>
   <!-- Bottom-right -->
-  <path d="M 590,410 L 560,410 L 560,440 L 590,440" fill="none" stroke="#FFEB00" stroke-width="2"/>
+  <path d="M 590,504 L 560,504 L 560,534 L 590,534" fill="none" stroke="#FFEB00" stroke-width="2"/>
 
   <!-- "BREAKING" style stamp -->
-  <g transform="translate(480, 115) rotate(-15)">
+  <g transform="translate(480, 125) rotate(-15)">
     <rect x="0" y="0" width="100" height="28" rx="3" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5" opacity="0.9"/>
-    <text x="50" y="20" text-anchor="middle" font-family="Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00">HÄTÄ!</text>
+    <text x="50" y="20" text-anchor="middle" font-family="Impact, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF">HÄTÄ!</text>
   </g>
 
   <!-- Temperature anomaly indicators -->
-  <g transform="translate(480, 160)">
+  <g transform="translate(480, 170)">
     <text font-family="Impact, sans-serif" font-size="10" fill="#FFEB00" font-weight="700">▼ POIKKEAMA ▼</text>
     <line x1="0" y1="16" x2="80" y2="16" stroke="#FFEB00" stroke-width="1" opacity="0.5"/>
     <text font-family="Impact, sans-serif" font-size="9" fill="#FFFFFF" opacity="0.8">LUMI +42°C: +38°C</text>

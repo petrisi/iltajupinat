@@ -52,10 +52,10 @@
 
   <!-- Top border glow -->
   <rect x="0" y="0" width="600" height="3" fill="#FFEB00" filter="url(#glow)"/>
-  <rect x="0" y="500" width="600" height="3" fill="#FFEB00" filter="url(#glow)"/>
+  <rect x="0" y="497" width="600" height="3" fill="#FFEB00" filter="url(#glow)"/>
 
   <!-- SKANDAALI! banner -->
-  <polygon points="180,6 420,6 440,36 160,36" fill="#DC0000" filter="url(#glowBig)"/>
+  <polygon points="180,10 420,10 440,40 160,40" fill="#DC0000" filter="url(#glowBig)"/>
   <text x="300" y="31" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="20" font-weight="900" fill="#FFEB00" letter-spacing="4">SKANDAALI!</text>
 
   <!-- Main title -->
@@ -63,7 +63,7 @@
   <text x="300" y="92" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" fill="#FFEB00" filter="url(#glow)" letter-spacing="2">JULKISUUKSET</text>
 
   <!-- Subtitle -->
-  <text x="300" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#A04191" letter-spacing="6">— KÄRÄVÄ LASKENTAJÄRJESTYS —</text>
+  <text x="300" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#C061B1" letter-spacing="6">— KÄRÄVÄ LASKENTAJÄRJESTYS —</text>
 
   <!-- Divider line -->
   <line x1="50" y1="120" x2="550" y2="120" stroke="#A04191" stroke-width="2"/>
@@ -157,7 +157,7 @@
   <rect x="200" y="452" width="200" height="2" rx="1" fill="#A04191" opacity="0.4"/>
 
   <!-- Small disclaimer -->
-  <text x="300" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#555" font-style="italic">© 2025 Iltajupinat · Kaikki äänitasomittaukset ehdottomia · Ilmoitus</text>
+  <text x="300" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888" font-style="italic">© 2025 Iltajupinat · Kaikki äänitasomittaukset ehdottomia · Ilmoitus</text>
 
   <!-- Skull emoji decorations -->
   <text x="50" y="475" text-anchor="middle" font-size="14" opacity="0.5">💀</text>
