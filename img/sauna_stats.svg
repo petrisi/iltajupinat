@@ -35,7 +35,7 @@
   <rect x="0" y="0" width="660" height="8" fill="#FFEB00"/>
 
   <!-- SHOKKI! label - top right -->
-  <g transform="translate(460, 30)" filter="url(#glow)">
+  <g transform="translate(520, 15)" filter="url(#glow)">
     <rect x="0" y="0" width="130" height="50" rx="5" fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
     <text x="65" y="35" text-anchor="middle" class="shokki">SHOKKI!</text>
   </g>
