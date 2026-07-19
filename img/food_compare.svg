@@ -40,7 +40,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="400" fill="url(#bgGrad)" rx="8"/>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
   <rect x="2" y="2" width="596" height="396" fill="none" stroke="#DC0000" stroke-width="4" rx="8"/>
 
   <!-- Decorative corner stars -->

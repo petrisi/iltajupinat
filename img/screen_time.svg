@@ -66,27 +66,27 @@
     <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Lapset (7-12v)</text>
     <rect x="140" y="10" width="320" height="24" rx="4" fill="#222244"/>
     <rect x="140" y="10" width="230" height="24" rx="4" fill="url(#bar1)"/>
-    <text x="378" y="27" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">4h 32min/päivä</text>
+    <text x="378" y="27" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">4h 32min</text>
 
     <!-- Row 2: Nuoret (13-17v) 6h15min = 375min (height=320) -->
     <text x="0" y="58" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Nuoret (13-17v)</text>
     <rect x="140" y="46" width="310" height="24" rx="4" fill="#222244"/>
     <rect x="140" y="46" width="310" height="24" rx="4" fill="url(#bar2)" filter="url(#glowRed)"/>
-    <text x="465" y="63" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">6h 15min/päivä</text>
+    <text x="455" y="63" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">6h 15min</text>
     <!-- SKANDAALI arrow -->
-    <text x="470" y="38" font-family="Impact, sans-serif" font-size="10" fill="#DC0000" filter="url(#glowRed)">▼ REKORDI!</text>
+    <text x="460" y="38" font-family="Impact, sans-serif" font-size="10" fill="#DC0000" filter="url(#glowRed)">▼ REKORDI!</text>
 
     <!-- Row 3: Vanhemmat 5h48min = 348min (height=297) -->
     <text x="0" y="94" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Vanhemmat</text>
     <rect x="140" y="82" width="320" height="24" rx="4" fill="#222244"/>
     <rect x="140" y="82" width="297" height="24" rx="4" fill="url(#bar3)"/>
-    <text x="445" y="99" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">5h 48min/päivä</text>
+    <text x="445" y="99" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">5h 48min</text>
 
     <!-- Row 4: Yli 65-v 3h20min = 200min (height=170) -->
     <text x="0" y="130" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Yli 65-v</text>
     <rect x="140" y="118" width="320" height="24" rx="4" fill="#222244"/>
     <rect x="140" y="118" width="170" height="24" rx="4" fill="url(#bar4)"/>
-    <text x="318" y="135" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">3h 20min/päivä</text>
+    <text x="318" y="135" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">3h 20min</text>
 
     <!-- Row 5: Koirat 0min -->
     <text x="0" y="166" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Koirat</text>

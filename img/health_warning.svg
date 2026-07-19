@@ -39,7 +39,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="450" fill="url(#bgGrad)" rx="8"/>
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
 
   <!-- Outer border -->
   <rect x="3" y="3" width="594" height="444" fill="none" stroke="#DC0000" stroke-width="3" rx="8"/>

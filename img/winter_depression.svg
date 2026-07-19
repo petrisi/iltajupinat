@@ -36,7 +36,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="450" fill="url(#bgGrad)" rx="8"/>
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
 
   <!-- Red warning border top -->
   <rect x="0" y="0" width="600" height="8" fill="#DC0000"/>

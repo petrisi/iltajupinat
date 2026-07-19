@@ -45,7 +45,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="500" fill="#1A0F20" rx="8"/>
+  <rect width="600" height="500" fill="#1A0F20"/>
 
   <!-- Decorative border -->
   <rect x="4" y="4" width="592" height="492" fill="none" stroke="#A04191" stroke-width="3" rx="6"/>
