@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgWell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="barWell1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#553366"/>
+      <stop offset="100%" stop-color="#664477"/>
+    </linearGradient>
+    <linearGradient id="barWell2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#665544"/>
+      <stop offset="100%" stop-color="#887766"/>
+    </linearGradient>
+    <linearGradient id="barWell3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#44cc44"/>
+      <stop offset="100%" stop-color="#66ee66"/>
+    </linearGradient>
+    <linearGradient id="barWell4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFEB00"/>
+    </linearGradient>
+    <linearGradient id="barWell5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3388ff"/>
+      <stop offset="100%" stop-color="#66aaff"/>
+    </linearGradient>
+    <linearGradient id="barWell6" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#ff3333"/>
+    </linearGradient>
+    <filter id="glowRed">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowText">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowYellow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowGreen">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgWell)"/>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="446" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="0" width="4" height="450" fill="#DC0000"/>
+  <rect x="596" y="0" width="4" height="450" fill="#DC0000"/>
+
+  <!-- OHO badge -->
+  <g transform="translate(440, 12)">
+    <polygon points="0,0 60,-4 70,20 45,30 25,33 5,26" fill="#A04191" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="35" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00" font-weight="bold" letter-spacing="1">OHO!</text>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="55" text-anchor="middle" font-family="Impact, sans-serif" font-size="28" fill="#FFEB00" filter="url(#glowText)" letter-spacing="2">HYVINVOINTI-INDEXI</text>
+  <line x1="100" y1="65" x2="500" y2="65" stroke="#A04191" stroke-width="2"/>
+  <text x="300" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#cccccc" font-style="italic">Kuinka hyvinvoivia suomalaiset ovat — kuukausittain</text>
+
+  <!-- Chart area -->
+  <g transform="translate(70, 100)">
+    <!-- Y-axis labels -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="9" fill="#888899">100</text>
+    <text x="0" y="140" font-family="Arial, sans-serif" font-size="9" fill="#888899">50</text>
+    <text x="0" y="280" font-family="Arial, sans-serif" font-size="9" fill="#888899">0</text>
+
+    <!-- Grid lines -->
+    <line x1="15" y1="0" x2="480" y2="0" stroke="#333355" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="15" y1="140" x2="480" y2="140" stroke="#333355" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="15" y1="280" x2="480" y2="280" stroke="#555577" stroke-width="1"/>
+
+    <!-- Bar 1: Tammi 15/100 (height=42) -->
+    <rect x="30" y="238" width="55" height="42" rx="3" fill="url(#barWell1)" opacity="0.8"/>
+    <text x="57" y="233" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00">15</text>
+    <text x="57" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Tammi</text>
+    <text x="57" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bbbbcc" font-style="italic">"Pimeää ja masentavaa"</text>
+
+    <!-- Bar 2: Maalis 35/100 (height=98) -->
+    <rect x="110" y="182" width="55" height="98" rx="3" fill="url(#barWell2)" opacity="0.8"/>
+    <text x="137" y="177" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00">35</text>
+    <text x="137" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Maalis</text>
+    <text x="137" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bbbbcc" font-style="italic">"Valoa?"</text>
+
+    <!-- Bar 3: Touko 65/100 (height=182) -->
+    <rect x="190" y="98" width="55" height="182" rx="3" fill="url(#barWell3)" opacity="0.85"/>
+    <text x="217" y="93" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00">65</text>
+    <text x="217" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Touko</text>
+    <text x="217" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#66ee66" font-style="italic">"Väriä!"</text>
+
+    <!-- Bar 4: Heinä 95/100 (height=266) -->
+    <rect x="270" y="14" width="55" height="266" rx="3" fill="url(#barWell4)" opacity="0.9" filter="url(#glowYellow)"/>
+    <text x="297" y="9" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00" filter="url(#glowYellow)">95</text>
+    <text x="297" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Heinä</text>
+    <text x="297" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#FFD700" font-style="italic">"Mökki!"</text>
+    <!-- Crown -->
+    <text x="297" y="-2" text-anchor="middle" font-size="16">👑</text>
+
+    <!-- Bar 5: Syys 55/100 (height=154) -->
+    <rect x="350" y="126" width="55" height="154" rx="3" fill="url(#barWell5)" opacity="0.8"/>
+    <text x="377" y="121" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00">55</text>
+    <text x="377" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Syys</text>
+    <text x="377" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#66aaff" font-style="italic">"Syksyn blues"</text>
+
+    <!-- Bar 6: Marras 10/100 (height=28) -->
+    <rect x="430" y="252" width="55" height="28" rx="3" fill="url(#barWell6)" opacity="0.8" filter="url(#glowRed)"/>
+    <text x="457" y="247" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00">10</text>
+    <text x="457" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">Marras</text>
+    <text x="457" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#DC0000" font-style="italic">"Enää ei"</text>
+  </g>
+
+  <!-- Seasonal mood arrows -->
+  <g transform="translate(30, 370)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">↓ TALVI</text>
+    <text x="250" y="0" font-family="Arial, sans-serif" font-size="10" fill="#66ee66">↑ KESÄ</text>
+    <text x="480" y="0" font-family="Arial, sans-serif" font-size="10" fill="#DC0000">↓ TALVI</text>
+  </g>
+
+  <!-- Bottom warning box -->
+  <g transform="translate(15, 390)">
+    <rect x="0" y="0" width="570" height="30" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1"/>
+    <text x="285" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" fill="#DC0000" filter="url(#glowRed)">⚠ PALJASTUS: Hyvinvointi nousee vain mökillä — loput 11 kk bonuspisteitä ⚠</text>
+  </g>
+
+  <!-- Source credit -->
+  <text x="300" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666688">© 2025 Iltajupinat — Lähde: Kuvitteellinen hyvinvointimittari · Nukkuminen ei lasketa hyvinvoinniksi</text>
+</svg>

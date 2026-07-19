@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#A04191"/>
+      <stop offset="100%" stop-color="#c76ddb"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#ff6666"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#FFEB00"/>
+      <stop offset="100%" stop-color="#ffee55"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#3388ff"/>
+      <stop offset="100%" stop-color="#66aaff"/>
+    </linearGradient>
+    <linearGradient id="bar5" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#555566"/>
+      <stop offset="100%" stop-color="#777788"/>
+    </linearGradient>
+    <filter id="glowRed">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowText">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowYellow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgScreen)"/>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="446" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="0" width="4" height="450" fill="#DC0000"/>
+  <rect x="596" y="0" width="4" height="450" fill="#DC0000"/>
+
+  <!-- PALJASTUS badge -->
+  <g transform="translate(400, 12)">
+    <polygon points="0,0 80,-3 90,22 60,32 30,35 5,28" fill="#A04191" stroke="#FFEB00" stroke-width="1.5" filter="url(#glowRed)"/>
+    <text x="45" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00" font-weight="bold" letter-spacing="1">PALJASTUS!</text>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="55" text-anchor="middle" font-family="Impact, sans-serif" font-size="26" fill="#FFEB00" filter="url(#glowText)" letter-spacing="2">NÄYTÖNAIKA SUOMESSA</text>
+  <line x1="90" y1="65" x2="510" y2="65" stroke="#DC0000" stroke-width="2" filter="url(#glowRed)"/>
+  <text x="300" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#cccccc" font-style="italic">Kuinka pitkään suomalaiset tuijottavat ruutuja — ja kuka ei</text>
+
+  <!-- Chart area: horizontal bars -->
+  <g transform="translate(60, 100)">
+    <!-- Row 1: Lapset (7-12v) 4h32min = 272min (max=375, height=195) -->
+    <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Lapset (7-12v)</text>
+    <rect x="140" y="10" width="320" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="10" width="230" height="24" rx="4" fill="url(#bar1)"/>
+    <text x="378" y="27" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">4h 32min/päivä</text>
+
+    <!-- Row 2: Nuoret (13-17v) 6h15min = 375min (height=320) -->
+    <text x="0" y="58" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Nuoret (13-17v)</text>
+    <rect x="140" y="46" width="320" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="46" width="320" height="24" rx="4" fill="url(#bar2)" filter="url(#glowRed)"/>
+    <text x="480" y="63" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">6h 15min/päivä</text>
+    <!-- SKANDAALI arrow -->
+    <text x="470" y="38" font-family="Impact, sans-serif" font-size="10" fill="#DC0000" filter="url(#glowRed)">▼ REKORDI!</text>
+
+    <!-- Row 3: Vanhemmat 5h48min = 348min (height=297) -->
+    <text x="0" y="94" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Vanhemmat</text>
+    <rect x="140" y="82" width="320" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="82" width="297" height="24" rx="4" fill="url(#bar3)"/>
+    <text x="445" y="99" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">5h 48min/päivä</text>
+
+    <!-- Row 4: Yli 65-v 3h20min = 200min (height=170) -->
+    <text x="0" y="130" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Yli 65-v</text>
+    <rect x="140" y="118" width="320" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="118" width="170" height="24" rx="4" fill="url(#bar4)"/>
+    <text x="318" y="135" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00">3h 20min/päivä</text>
+
+    <!-- Row 5: Koirat 0min -->
+    <text x="0" y="166" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="bold">Koirat</text>
+    <rect x="140" y="154" width="320" height="24" rx="4" fill="#222244"/>
+    <rect x="140" y="154" width="1" height="24" rx="0" fill="url(#bar5)" opacity="0.3"/>
+    <text x="155" y="171" font-family="Impact, sans-serif" font-size="12" fill="#aaaaaa">0 min</text>
+    <text x="200" y="171" font-family="Arial, sans-serif" font-size="10" fill="#A04191" font-style="italic">"Ainoa laji ilman puhelinta"</text>
+  </g>
+
+  <!-- Fun fact box -->
+  <g transform="translate(20, 310)">
+    <rect x="0" y="0" width="560" height="38" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
+    <text x="280" y="16" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#FFEB00" filter="url(#glowYellow)">OHO! Suomalainen viettää keskimäärin 17h 15min vuorokaudessa ruudun edessä</text>
+    <text x="280" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">— vain unessa on enemmän aikaa</text>
+  </g>
+
+  <!-- Source credit -->
+  <text x="300" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666688">© 2025 Iltajupinat — Lähde: Kuvitteellinen mediankulutusraportti · Koirien tiedot varmistettu</text>
+</svg>

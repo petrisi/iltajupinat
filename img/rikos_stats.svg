@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgCrime" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="barCrime1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#ff3333"/>
+    </linearGradient>
+    <linearGradient id="barCrime2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A04191"/>
+      <stop offset="100%" stop-color="#c76ddb"/>
+    </linearGradient>
+    <linearGradient id="barCrime3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFEB00"/>
+      <stop offset="100%" stop-color="#ffee55"/>
+    </linearGradient>
+    <linearGradient id="barCrime4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3388ff"/>
+      <stop offset="100%" stop-color="#66aaff"/>
+    </linearGradient>
+    <linearGradient id="barCrime5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#44cc44"/>
+      <stop offset="100%" stop-color="#66ee66"/>
+    </linearGradient>
+    <filter id="glowRed">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowText">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowYellow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgCrime)"/>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="446" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="0" width="4" height="450" fill="#DC0000"/>
+  <rect x="596" y="0" width="4" height="450" fill="#DC0000"/>
+
+  <!-- SHOKKI badge -->
+  <g transform="translate(410, 12)">
+    <polygon points="0,0 75,-3 85,22 55,32 30,35 5,28" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5" filter="url(#glowRed)"/>
+    <text x="42" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00" font-weight="bold" letter-spacing="1">SHOKKI!</text>
+  </g>
+
+  <!-- Skull icon -->
+  <text x="50" y="30" font-size="18" fill="#DC0000">💀</text>
+
+  <!-- Title -->
+  <text x="300" y="55" text-anchor="middle" font-family="Impact, sans-serif" font-size="24" fill="#FFEB00" filter="url(#glowText)" letter-spacing="2">SUOMEN RIKOLLISUUS</text>
+  <text x="300" y="78" text-anchor="middle" font-family="Impact, sans-serif" font-size="16" fill="#DC0000" filter="url(#glowRed)">KÄRÄVÄT LUVUT</text>
+  <line x1="80" y1="88" x2="520" y2="88" stroke="#DC0000" stroke-width="2" filter="url(#glowRed)"/>
+  <text x="300" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa" font-style="italic">Viranomaiset eivät vahvista — me emme myöskään</text>
+
+  <!-- Chart area: horizontal bars -->
+  <g transform="translate(55, 115)">
+    <!-- Bar backgrounds and values -->
+    <!-- max = 4521 -->
+
+    <!-- Row 1: Pullavarkaudet 4521 -->
+    <text x="0" y="18" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Pullavarkaudet</text>
+    <rect x="170" y="6" width="330" height="22" rx="4" fill="#222244"/>
+    <rect x="170" y="6" width="330" height="22" rx="4" fill="url(#barCrime1)" filter="url(#glowRed)"/>
+    <text x="512" y="22" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00">4 521</text>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="10" fill="#DC0000" font-style="italic">"Eniten"</text>
+
+    <!-- Row 2: Mökkirikokset 2891 (64%) -->
+    <text x="0" y="62" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Mökkirikokset</text>
+    <rect x="170" y="50" width="330" height="22" rx="4" fill="#222244"/>
+    <rect x="170" y="50" width="211" height="22" rx="4" fill="url(#barCrime2)"/>
+    <text x="508" y="66" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00">2 891</text>
+    <text x="170" y="86" font-family="Arial, sans-serif" font-size="10" fill="#A04191" font-style="italic">"Vain kesällä"</text>
+
+    <!-- Row 3: Sauna-ryöstöt 347 (7.7%) -->
+    <text x="0" y="106" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Sauna-ryöstöt</text>
+    <rect x="170" y="94" width="330" height="22" rx="4" fill="#222244"/>
+    <rect x="170" y="94" width="25" height="22" rx="4" fill="url(#barCrime3)"/>
+    <text x="508" y="110" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00">347</text>
+    <text x="170" y="130" font-family="Arial, sans-serif" font-size="10" fill="#FFEB00" font-style="italic">"Kyllä, on olemassa"</text>
+
+    <!-- Row 4: Porovarkaudet 23 (0.5%) -->
+    <text x="0" y="150" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Porovarkaudet</text>
+    <rect x="170" y="138" width="330" height="22" rx="4" fill="#222244"/>
+    <rect x="170" y="138" width="2" height="22" rx="0" fill="url(#barCrime4)" opacity="0.7"/>
+    <text x="508" y="154" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00">23</text>
+    <text x="170" y="174" font-family="Arial, sans-serif" font-size="10" fill="#66aaff" font-style="italic">"Lapissa vain"</text>
+
+    <!-- Row 5: Kukkakauppa-huijaukset 1 -->
+    <text x="0" y="194" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">Kukkakauppa-huijaukset</text>
+    <rect x="170" y="182" width="330" height="22" rx="4" fill="#222244"/>
+    <rect x="170" y="182" width="1" height="22" rx="0" fill="url(#barCrime5)" opacity="0.5"/>
+    <text x="508" y="198" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFEB00">1</text>
+    <text x="170" y="218" font-family="Arial, sans-serif" font-size="10" fill="#66ee66" font-style="italic">"Vain Imatralla"</text>
+  </g>
+
+  <!-- Info box -->
+  <g transform="translate(20, 350)">
+    <rect x="0" y="0" width="560" height="35" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1.5"/>
+    <text x="280" y="16" text-anchor="middle" font-family="Impact, sans-serif" font-size="12" fill="#DC0000" filter="url(#glowRed)">⚠ VAROITUS: Pullavarkaudet nousseet 300 % — syy: korvapuustikriisi ⚠</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Kukkakauppa-huijaus: myytiin leikkokukkia, toimitettu lehtiä</text>
+  </g>
+
+  <!-- Source credit -->
+  <text x="300" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666688">© 2025 Iltajupinat — Lähde: Kuvitteellinen rikosrekisteri · Sauna-ryöstöt todistettu · Muut luvut arvioituja</text>
+</svg>

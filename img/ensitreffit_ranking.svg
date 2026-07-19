@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="bgRank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="barGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFEB00"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#44cc44"/>
+      <stop offset="100%" stop-color="#66ee66"/>
+    </linearGradient>
+    <linearGradient id="barOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#ffaa33"/>
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4488ff"/>
+      <stop offset="100%" stop-color="#66aaff"/>
+    </linearGradient>
+    <linearGradient id="barGray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#666677"/>
+      <stop offset="100%" stop-color="#888899"/>
+    </linearGradient>
+    <filter id="glowRed">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowText">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowYellow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" fill="url(#bgRank)"/>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="496" width="600" height="4" fill="#DC0000" filter="url(#glowRed)"/>
+  <rect x="0" y="0" width="4" height="500" fill="#DC0000"/>
+  <rect x="596" y="0" width="4" height="500" fill="#DC0000"/>
+
+  <!-- SKANDAALI badge -->
+  <g transform="translate(390, 10)">
+    <polygon points="0,0 85,-2 95,22 65,32 30,35 5,28" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5" filter="url(#glowRed)"/>
+    <text x="48" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="13" fill="#FFEB00" font-weight="bold" letter-spacing="1">SKANDAALI!</text>
+  </g>
+
+  <!-- Heart emoji decoration -->
+  <text x="300" y="34" text-anchor="middle" font-size="20" fill="#DC0000" font-family="sans-serif">❤️</text>
+
+  <!-- Title -->
+  <text x="300" y="62" text-anchor="middle" font-family="Impact, sans-serif" font-size="22" fill="#FFEB00" filter="url(#glowText)" letter-spacing="1">ENSITREFFIT SUOMI</text>
+  <text x="300" y="80" text-anchor="middle" font-family="Impact, sans-serif" font-size="15" fill="#A04191" letter-spacing="1">PARITUSPALJASTUKSET</text>
+  <line x1="80" y1="92" x2="520" y2="92" stroke="#A04191" stroke-width="2"/>
+  <text x="300" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa" font-style="italic">Salaiset yhteensopivuuslaskelmat paljastuneet!</text>
+
+  <!-- Ranking rows -->
+  <g transform="translate(50, 120)">
+
+    <!-- #1: Jääkiekkoilija & opettaja - 95% -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="500" height="55" rx="6" fill="#1a1a33" stroke="#FFD700" stroke-width="1.5"/>
+      <text x="15" y="35" font-family="Impact, sans-serif" font-size="22" fill="#FFD700" filter="url(#glowYellow)">#1</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">Jääkiekkoilija &amp; opettaja</text>
+      <text x="50" y="43" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">Yhteensopivuus: 95 %</text>
+      <rect x="250" y="15" width="240" height="20" rx="4" fill="#333355"/>
+      <rect x="250" y="15" width="228" height="20" rx="4" fill="url(#barGold)"/>
+      <text x="470" y="30" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#FFD700">95%</text>
+      <text x="500" y="52" text-anchor="end" font-size="14">🏒</text>
+    </g>
+
+    <!-- #2: Laulaja & koirankulkija - 88% -->
+    <g transform="translate(0, 65)">
+      <rect x="0" y="0" width="500" height="55" rx="6" fill="#1a1a33" stroke="#A04191" stroke-width="1"/>
+      <text x="15" y="35" font-family="Impact, sans-serif" font-size="22" fill="#cccccc">#2</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">Laulaja &amp; koirankulkija</text>
+      <text x="50" y="43" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">Yhteensopivuus: 88 %</text>
+      <rect x="250" y="15" width="240" height="20" rx="4" fill="#333355"/>
+      <rect x="250" y="15" width="211" height="20" rx="4" fill="url(#barGreen)"/>
+      <text x="470" y="30" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#66ee66">88%</text>
+      <text x="500" y="52" text-anchor="end" font-size="14">🎤</text>
+    </g>
+
+    <!-- #3: Poliitikko & barista - 72% -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="500" height="55" rx="6" fill="#1a1a33" stroke="#888" stroke-width="1"/>
+      <text x="15" y="35" font-family="Impact, sans-serif" font-size="22" fill="#999999">#3</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">Poliitikko &amp; barista</text>
+      <text x="50" y="43" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">Yhteensopivuus: 72 %</text>
+      <rect x="250" y="15" width="240" height="20" rx="4" fill="#333355"/>
+      <rect x="250" y="15" width="173" height="20" rx="4" fill="url(#barOrange)"/>
+      <text x="470" y="30" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#ffaa33">72%</text>
+      <text x="500" y="52" text-anchor="end" font-size="14">☕</text>
+    </g>
+
+    <!-- #4: YouTuber & kirjastoapulainen - 61% -->
+    <g transform="translate(0, 195)">
+      <rect x="0" y="0" width="500" height="55" rx="6" fill="#1a1a33" stroke="#666" stroke-width="1"/>
+      <text x="15" y="35" font-family="Impact, sans-serif" font-size="22" fill="#999999">#4</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">YouTuber &amp; kirjastoapulainen</text>
+      <text x="50" y="43" font-family="Arial, sans-serif" font-size="10" fill="#cccccc">Yhteensopivuus: 61 %</text>
+      <rect x="250" y="15" width="240" height="20" rx="4" fill="#333355"/>
+      <rect x="250" y="15" width="146" height="20" rx="4" fill="url(#barBlue)"/>
+      <text x="470" y="30" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#66aaff">61%</text>
+      <text x="500" y="52" text-anchor="end" font-size="14">📚</text>
+    </g>
+
+    <!-- #5: Saunomaton mies & kirkkoherra - 12% -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="500" height="55" rx="6" fill="#1a1a33" stroke="#DC0000" stroke-width="1.5"/>
+      <text x="15" y="35" font-family="Impact, sans-serif" font-size="22" fill="#DC0000" filter="url(#glowRed)">#5</text>
+      <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">Saunomaton mies &amp; kirkkoherra</text>
+      <text x="50" y="43" font-family="Arial, sans-serif" font-size="10" fill="#ff6666">Yhteensopivuus: 12 %</text>
+      <rect x="250" y="15" width="240" height="20" rx="4" fill="#333355"/>
+      <rect x="250" y="15" width="29" height="20" rx="4" fill="url(#barGray)"/>
+      <text x="470" y="30" text-anchor="end" font-family="Impact, sans-serif" font-size="14" fill="#DC0000">12%</text>
+      <text x="500" y="52" text-anchor="end" font-size="14">💀</text>
+      <!-- Warning -->
+      <text x="250" y="52" text-anchor="middle" font-family="Impact, sans-serif" font-size="9" fill="#DC0000" filter="url(#glowRed)">⚠ MAHDOTTOMA</text>
+    </g>
+  </g>
+
+  <!-- Bottom warning box -->
+  <g transform="translate(20, 440)">
+    <rect x="0" y="0" width="560" height="28" rx="5" fill="#1a0a0a" stroke="#DC0000" stroke-width="1"/>
+    <text x="280" y="19" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" fill="#DC0000" filter="url(#glowRed)">VAROITUS: Saunomaton mies ei voi osallistua — lakipykälä 47.b §</text>
+  </g>
+
+  <!-- Source credit -->
+  <text x="300" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666688">© 2025 Iltajupinat — Lähde: Kuvitteellinen treffitietokanta · Yhteensopivuuslaskelmat arvioituja</text>
+</svg>
