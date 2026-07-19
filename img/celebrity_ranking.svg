@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0a1e"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="bar5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A04191"/>
+      <stop offset="100%" stop-color="#7b2d70"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A04191"/>
+      <stop offset="100%" stop-color="#9e1a8a"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#A04191"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#ff3300"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="50%" stop-color="#FFEB00"/>
+      <stop offset="100%" stop-color="#DC0000"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowBig">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="soundWave" x="0" y="0" width="8" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="2" width="2" height="8" fill="#FFEB00" opacity="0.3"/>
+      <rect x="3" y="0" width="2" height="12" fill="#FFEB00" opacity="0.2"/>
+      <rect x="6" y="3" width="2" height="6" fill="#FFEB00" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" fill="url(#bgGrad)"/>
+  <rect width="600" height="500" fill="url(#soundWave)" opacity="0.5"/>
+
+  <!-- Decorative corner accents -->
+  <polygon points="0,0 80,0 0,80" fill="#A04191" opacity="0.4"/>
+  <polygon points="600,0 520,0 600,80" fill="#A04191" opacity="0.4"/>
+  <polygon points="0,500 80,500 0,420" fill="#DC0000" opacity="0.3"/>
+  <polygon points="600,500 520,500 600,420" fill="#DC0000" opacity="0.3"/>
+
+  <!-- Top border glow -->
+  <rect x="0" y="0" width="600" height="3" fill="#FFEB00" filter="url(#glow)"/>
+  <rect x="0" y="500" width="600" height="3" fill="#FFEB00" filter="url(#glow)"/>
+
+  <!-- SKANDAALI! banner -->
+  <polygon points="180,6 420,6 440,36 160,36" fill="#DC0000" filter="url(#glowBig)"/>
+  <text x="300" y="31" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="20" font-weight="900" fill="#FFEB00" letter-spacing="4">SKANDAALI!</text>
+
+  <!-- Main title -->
+  <text x="300" y="62" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" fill="#FFEB00" filter="url(#glow)" letter-spacing="2">SUOMEN HUUTAVIMMAT</text>
+  <text x="300" y="92" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" fill="#FFEB00" filter="url(#glow)" letter-spacing="2">JULKISUUKSET</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#A04191" letter-spacing="6">— KÄRÄVÄ LASKENTAJÄRJESTYS —</text>
+
+  <!-- Divider line -->
+  <line x1="50" y1="120" x2="550" y2="120" stroke="#A04191" stroke-width="2"/>
+  <line x1="50" y1="123" x2="550" y2="123" stroke="#A04191" stroke-width="1" opacity="0.4"/>
+
+  <!-- ===== RANK #5 ===== -->
+  <g transform="translate(0, 130)">
+    <!-- Rank badge -->
+    <circle cx="40" cy="18" r="16" fill="#A04191" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="40" y="23" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00">#5</text>
+    <!-- Name -->
+    <text x="68" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Kuluttajariitalautakunta</text>
+    <!-- dB label -->
+    <text x="530" y="22" text-anchor="end" font-family="'Arial Black', Impact, sans-serif" font-size="13" font-weight="900" fill="#A04191">60 dB</text>
+    <!-- Sound bar background -->
+    <rect x="68" y="30" width="462" height="6" rx="3" fill="#1a0a1e" stroke="#A04191" stroke-width="0.5" opacity="0.6"/>
+    <!-- Sound bar fill (50% of max) -->
+    <rect x="68" y="30" width="231" height="6" rx="3" fill="url(#bar5)"/>
+  </g>
+
+  <!-- ===== RANK #4 ===== -->
+  <g transform="translate(0, 175)">
+    <circle cx="40" cy="18" r="16" fill="#A04191" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="40" y="23" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00">#4</text>
+    <text x="68" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Sanna Stellan</text>
+    <text x="530" y="22" text-anchor="end" font-family="'Arial Black', Impact, sans-serif" font-size="13" font-weight="900" fill="#A04191">75 dB</text>
+    <rect x="68" y="30" width="462" height="6" rx="3" fill="#1a0a1e" stroke="#A04191" stroke-width="0.5" opacity="0.6"/>
+    <rect x="68" y="30" width="289" height="6" rx="3" fill="url(#bar4)"/>
+  </g>
+
+  <!-- ===== RANK #3 ===== -->
+  <g transform="translate(0, 220)">
+    <circle cx="40" cy="18" r="16" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="40" y="23" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00">#3</text>
+    <text x="68" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Eino Grön</text>
+    <text x="530" y="22" text-anchor="end" font-family="'Arial Black', Impact, sans-serif" font-size="13" font-weight="900" fill="#DC0000">85 dB</text>
+    <rect x="68" y="30" width="462" height="6" rx="3" fill="#1a0a1e" stroke="#DC0000" stroke-width="0.5" opacity="0.6"/>
+    <rect x="68" y="30" width="328" height="6" rx="3" fill="url(#bar3)"/>
+  </g>
+
+  <!-- ===== RANK #2 ===== -->
+  <g transform="translate(0, 265)">
+    <circle cx="40" cy="18" r="16" fill="#DC0000" stroke="#FFEB00" stroke-width="1.5"/>
+    <text x="40" y="23" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00">#2</text>
+    <text x="68" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Aleksis Kivi</text>
+    <text x="530" y="22" text-anchor="end" font-family="'Arial Black', Impact, sans-serif" font-size="13" font-weight="900" fill="#DC0000">95 dB</text>
+    <rect x="68" y="30" width="462" height="6" rx="3" fill="#1a0a1e" stroke="#DC0000" stroke-width="0.5" opacity="0.6"/>
+    <rect x="68" y="30" width="367" height="6" rx="3" fill="url(#bar2)"/>
+  </g>
+
+  <!-- ===== RANK #1 - SPECIAL ===== -->
+  <g transform="translate(0, 310)">
+    <!-- Background highlight -->
+    <rect x="0" y="-5" width="600" height="50" rx="5" fill="#DC0000" opacity="0.12"/>
+    <rect x="0" y="-5" width="600" height="50" rx="5" fill="none" stroke="#DC0000" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Rank badge - bigger and glowing -->
+    <circle cx="40" cy="18" r="18" fill="#DC0000" stroke="#FFEB00" stroke-width="2" filter="url(#glow)"/>
+    <text x="40" y="24" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="18" font-weight="900" fill="#FFEB00">#1</text>
+    <!-- Name - bigger -->
+    <text x="68" y="22" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#FFEB00">Perussuomalaiset</text>
+    <!-- dB label - bigger and glowing -->
+    <text x="530" y="24" text-anchor="end" font-family="'Arial Black', Impact, sans-serif" font-size="16" font-weight="900" fill="#FFEB00" filter="url(#glow)">120 dB</text>
+    <!-- Sound bar - thick and glowing -->
+    <rect x="68" y="30" width="462" height="8" rx="4" fill="#1a0a1e" stroke="#FFEB00" stroke-width="0.5" opacity="0.6"/>
+    <rect x="68" y="30" width="462" height="8" rx="4" fill="url(#bar1)" filter="url(#glow)"/>
+    <!-- Explosion sparkles around #1 bar -->
+    <circle cx="530" cy="34" r="3" fill="#FFEB00" opacity="0.8"/>
+    <circle cx="540" cy="30" r="2" fill="#DC0000" opacity="0.7"/>
+    <circle cx="545" cy="37" r="2.5" fill="#FFEB00" opacity="0.6"/>
+  </g>
+
+  <!-- Sound wave decoration on the right side -->
+  <g opacity="0.25">
+    <rect x="555" y="135" width="3" height="15" fill="#FFEB00" rx="1.5"/>
+    <rect x="560" y="130" width="3" height="25" fill="#FFEB00" rx="1.5"/>
+    <rect x="565" y="138" width="3" height="10" fill="#FFEB00" rx="1.5"/>
+    <rect x="570" y="128" width="3" height="30" fill="#FFEB00" rx="1.5"/>
+    <rect x="575" y="135" width="3" height="15" fill="#FFEB00" rx="1.5"/>
+    <rect x="580" y="132" width="3" height="20" fill="#FFEB00" rx="1.5"/>
+    <rect x="585" y="130" width="3" height="24" fill="#FFEB00" rx="1.5"/>
+    <rect x="590" y="136" width="3" height="12" fill="#FFEB00" rx="1.5"/>
+    <rect x="595" y="133" width="3" height="18" fill="#FFEB00" rx="1.5"/>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="300" y="430" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-size="14" font-weight="900" fill="#A04191" letter-spacing="3">⚡ LÄHDE: Iltajupinat Tutkiva Toimitus ⚡</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="150" y="445" width="300" height="3" rx="1.5" fill="#DC0000" opacity="0.6"/>
+  <rect x="200" y="452" width="200" height="2" rx="1" fill="#A04191" opacity="0.4"/>
+
+  <!-- Small disclaimer -->
+  <text x="300" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#555" font-style="italic">© 2025 Iltajupinat · Kaikki äänitasomittaukset ehdottomia · Ilmoitus</text>
+
+  <!-- Skull emoji decorations -->
+  <text x="50" y="475" text-anchor="middle" font-size="14" opacity="0.5">💀</text>
+  <text x="550" y="475" text-anchor="middle" font-size="14" opacity="0.5">💀</text>
+</svg>

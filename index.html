@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iltajupinat — Suomen meluisin uutismedia</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.5;
+  }
+  a { color: inherit; text-decoration: none; }
+  img, svg { max-width: 100%; height: auto; display: block; }
+  img[src$=".svg"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ===== MASTHEAD ===== */
+  .masthead {
+    background: linear-gradient(135deg, #DC0000 0%, #a00 100%);
+    color: #fff;
+    padding: 16px 20px;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 3px 12px rgba(0,0,0,.35);
+  }
+  .masthead-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFEB00;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+  }
+  .logo span { color: #fff; }
+  .tagline {
+    font-size: .85rem;
+    opacity: .85;
+    font-style: italic;
+  }
+  .nav-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .nav-links a {
+    color: #fff; font-weight: 800; font-size: .85rem;
+    padding: 4px 10px; border-radius: 4px;
+    transition: background .2s;
+  }
+  .nav-links a:hover { background: rgba(255,255,255,.15); }
+
+  /* ===== BREAKING NEWS TICKER ===== */
+  .ticker {
+    background: #FFEB00;
+    color: #222;
+    font-weight: 700;
+    font-size: .95rem;
+    padding: 8px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker-scroll 30s linear infinite;
+  }
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+  }
+  .ticker-label {
+    background: #DC0000; color: #fff;
+    padding: 2px 10px; border-radius: 3px;
+    margin-right: 10px;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container {
+    max-width: 1200px; margin: 0 auto;
+    padding: 16px;
+  }
+  .section-block { margin-bottom: 28px; }
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #DC0000;
+  }
+  .section-badge {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .badge-uutiset   { background: #DC0000; }
+  .badge-urheilu   { background: #0084B4; }
+  .badge-viihde    { background: #A04191; }
+  .badge-terveys   { background: #FF8200; }
+  .badge-talous    { background: #32BDEF; }
+  .badge-saa       { background: #3385A1; }
+  .badge-ruoka     { background: #6AB283; }
+  .badge-matkailu  { background: #3385A1; }
+  .badge-autot     { background: #444; }
+  .badge-tyyli     { background: #222; }
+
+  /* ===== HERO CARD ===== */
+  .hero-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    margin-bottom: 24px;
+  }
+  .hero-card .hero-img {
+    width: 100%;
+    height: auto;
+    background: #1a1a1a;
+    padding: 8px;
+  }
+  .hero-card .hero-body { padding: 20px; }
+  .hero-card h1 {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  .hero-card .hero-teaser {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  .hero-card .hero-meta {
+    margin-top: 12px;
+    font-size: .8rem;
+    color: #999;
+  }
+
+  /* ===== CARD GRID ===== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,.10);
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.18); }
+  .card-img {
+    width: 100%;
+    height: auto;
+    background: #1a1a1a;
+    padding: 6px;
+  }
+  .card-body { padding: 14px; }
+  .card-body h2 {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.15rem;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: #111;
+  }
+  .card-body p {
+    font-size: .9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  .card-body .card-meta {
+    margin-top: 8px;
+    font-size: .75rem;
+    color: #999;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+  }
+  @media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; }
+  }
+  .sidebar { display: flex; flex-direction: column; gap: 14px; }
+  .sidebar-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.10);
+  }
+  .sidebar-card h3 {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .sidebar-card p {
+    font-size: .85rem; color: #555;
+  }
+
+  /* ===== POLL ===== */
+  .poll-box {
+    background: linear-gradient(135deg, #DC0000, #a00);
+    color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .poll-box h3 {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  .poll-box button {
+    display: block; width: 100%;
+    padding: 10px; margin-bottom: 8px;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 4px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .poll-box button:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== VIDEO BADGE ===== */
+  .video-badge {
+    display: inline-block;
+    background: #DC0000; color: #fff;
+    font-size: .7rem; font-weight: 700;
+    padding: 2px 8px; border-radius: 3px;
+    margin-right: 6px;
+    text-transform: uppercase;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: .85rem;
+    line-height: 1.6;
+  }
+  .site-footer strong { color: #FFEB00; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .logo { font-size: 1.8rem; }
+    .hero-card h1 { font-size: 1.4rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .hero-card .hero-img { max-height: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== MASTHEAD ===== -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="logo">ILTA<span>JUPINAT</span></div>
+      <div class="tagline">Suomen meluisin uutismedia — Jututamme, kun muut vaikenivat</div>
+    </div>
+    <nav class="nav-links">
+      <a href="#uutiset">Uutiset</a>
+      <a href="#urheilu">Urheilu</a>
+      <a href="#viihde">Viihde</a>
+      <a href="#terveys">Terveys</a>
+      <a href="#talous">Talous</a>
+      <a href="#saa">Sää</a>
+      <a href="#ruoka">Ruoka</a>
+      <a href="#matkailu">Matkailu</a>
+      <a href="#autot">Autot</a>
+      <a href="#tyyli">Tyyli</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== BREAKING NEWS TICKER ===== -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-label">JUURI NYT</span>
+    Mikkeli: Kettu ryösti kirkonkellon — "Kello soi nyt metsässä" &nbsp;&nbsp;•&nbsp;&nbsp;
+    SK: Aku Louhimies ohjaa elokuvan "Miten se tuntui, kun ei tuntunut mitään" &nbsp;&nbsp;•&nbsp;&nbsp;
+    Video: Porot hyökkäsivät supermarkettiin — 34 ostoskärryä tuhoutui &nbsp;&nbsp;•&nbsp;&nbsp;
+    HS: Pääministeri unohti sanakirjan — "Enkä minä mitään tehnytkään!" &nbsp;&nbsp;•&nbsp;&nbsp;
+    IS seuraa: Lohi karasi akvaariosta — poliisi etsii &nbsp;&nbsp;•&nbsp;&nbsp;
+    Brittimedia: Spice Girls-tähti osti mökin Saimaalta — "Suomi on uusi Maldivit" &nbsp;&nbsp;•&nbsp;&nbsp;
+    APu: Anna-Leena Sipilä aloitti koiraharrastuksen — "Se on kuin mies, mutta iloisempi"
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="container">
+
+  <!-- ===== HERO: UUTISET ===== -->
+  <section class="section-block" id="uutiset">
+    <div class="section-header">
+      <span class="section-badge badge-uutiset">Uutiset</span>
+      <span style="font-size:.85rem; color:#888;">Kotimaan ja ulkomaan ajankohtaiset jutut</span>
+    </div>
+
+    <div class="hero-card">
+      <img src="img/sauna_stats.svg" alt="Saunoihin kuolleet 2024 -infografiikka" class="hero-img">
+      <div class="hero-body">
+        <h1>JÄRKYTTÄVÄ PALJASTUS: Saunoissa kuoli tänä vuonna ennätysmäärä ihmisiä – yksi asia hämmästyttää viranomaisia</h1>
+        <p class="hero-teaser">
+          Tilastokeskus on julkaissut hämmästyttävän raportin, jonka mukaan saunomisen määrä on noussut 347 %:n.
+          Yli 300 yksinäistä miestä on kuollut saunoissa, kun taas saunomatta kuolleita on tasan nolla.
+          "Tämä on pysäyttävä tilanne," sanoo professori Juhani Perkele Turun yliopistosta.
+        </p>
+        <div class="hero-meta">Päivitetty 12 min sitten &nbsp;|&nbsp; Uutiset &nbsp;|&nbsp; Kirjoittanut: Jussi Jupinala</div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <!-- ARTICLE 2: Uutiset -->
+      <div class="card">
+        <div class="card-body">
+          <h2><span class="video-badge">Video</span>Poliisi pysäytti poron — eläin kuljetti 47 kiloa pullaa mukanaan</h2>
+          <p>Järkyttävä havainto Lahden moottoritien varrella: poro oli ylittänyt tien ja mukana ollut auto oli ladattu pullaa. "En ole 20 vuoteen nähnyt näin suurta pullavarastoa," sanoi komisario Heikki.</p>
+          <div class="card-meta">2 tuntia sitten &nbsp;•&nbsp; Kotimaa</div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 3: Uutiset -->
+      <div class="card">
+        <div class="card-body">
+          <h2>HS: Pääministeri unohti puheteesit — "Enkä minä mitään tehnytkään, se on totta"</h2>
+          <p>Helsingin Sanomat paljastaa, että pääministeri esiintyi eduskunnassa ilman puheteesejä. "Lapset olivat ottaneet ne ja piirtäneet niihin kissoja," pääministeri myönsi myöhemmin.</p>
+          <div class="card-meta">4 tuntia sitten &nbsp;•&nbsp; Politiikka</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN LAYOUT: CONTENT + SIDEBAR ===== -->
+  <div class="main-layout">
+    <div class="content-main">
+
+      <!-- ===== URHEILU ===== -->
+      <section class="section-block" id="urheilu">
+        <div class="section-header">
+          <span class="section-badge badge-urheilu">Urheilu</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/sports_compare.svg" alt="Jääkiekko vs Jalkapallo -infografiikka" class="hero-img">
+          <div class="hero-body">
+            <h1>IL seuraa: Jääkiekko pommitti jälleen – jalkapalloa katsoi vain 12 ihmistä, joista 11 oli jalkapalloilijoita</h1>
+            <p class="hero-teaser">
+              Iltajupinat on kerännyt hämmästyttävät luvut suomalaisten urheiluharrastuksista.
+              Jääkiekko on ylittänyt kaikki ennusteet: katsojia on 4,5 miljoonaa, kun taas jalkapalloa
+              katsoi 12 ihmistä. "Tämä on käsittämätöntä," sanoi urheilutoimittari Sami Pelto.
+              Palkkiot jääkiekossa ovat 10 miljoonaa euroa, jalkapallossa 500 euroa.
+            </p>
+            <div class="hero-meta">Päivitetty 30 min sitten &nbsp;|&nbsp; Urheilu &nbsp;|&nbsp; Kirjoittanut: Antti Jäämies</div>
+          </div>
+        </div>
+
+        <!-- ARTICLE 5: Urheilu -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Sami Pajari teki sen! Suomalainen pesi kaikki Virossa — "Kultamitali on meidän, anteeksi Viro"</h2>
+              <p>Suomalaisurheilija Sami Pajari voitti historiansa ensimmäisen kultamitalin Virossa järjestetyissä kilpailuissa. "En uskonut itseäni, mutta mä olin vaan nopeempi kuin kaikki muut," Pajari sanoi.</p>
+              <div class="card-meta">5 tuntia sitten &nbsp;•&nbsp; Yleisurheilu</div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 6: Urheilu -->
+          <div class="card">
+            <div class="card-body">
+              <h2><span class="video-badge">Video</span>Hirvittävää draamaa! Valtteri Bottakselta villi veto Belgian kisaan — auto lensi 40 metriä</h2>
+              <p>Valtteri Bottas yllätti kaikki Belgian GP:ssä, kun hänen autonsa lensi 40 metriä ilmassa. "Tuntui kuin olisin lentänyt," Bottas kommentoi. "Mutta mä olin kyllä valmis."</p>
+              <div class="card-meta">6 tuntia sitten &nbsp;•&nbsp; Formula 1</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== VIIHDE ===== -->
+      <section class="section-block" id="viihde">
+        <div class="section-header">
+          <span class="section-badge badge-viihde">Viihde</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/celebrity_ranking.svg" alt="Suomen huutavimmat julkisuudet -infografiikka" class="hero-img">
+          <div class="hero-body">
+            <h1>SKANDAALI! Iltajupinat rankkasi Suomen huutavimmat julkisuudet — ykkönen yllätti jopa asiantuntijat</h1>
+            <p class="hero-teaser">
+              Iltajupinatin tutkiva toimitus on mittannut Suomen julkisuuksien äänenvoimakkuutta.
+              Perussuomalaiset nousivat ykköseksi 120 dB:n huudolla, kun taas Kuluttajariitalautakunta
+              jäi viidenneksi vain 60 dB:lla. "Tämä on shokki," sanoi äänentohtori Kalle Kuulo.
+            </p>
+            <div class="hero-meta">Päivitetty 1 tunti sitten &nbsp;|&nbsp; Viihde &nbsp;|&nbsp; Kirjoittanut: Ville Viihde</div>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <!-- ARTICLE 8: Viihde -->
+          <div class="card">
+            <div class="card-body">
+              <h2>Sanna Stellan, 58, paljastaa: "Syön vain pullaa ja omena" — ravitsemusterapeutti järkyttyi</h2>
+              <p>Sanna Stellan on paljastanut ruokavalionsa, ja se on herättänyt kohua. "Varmasti syön pullaa, jos on olemassa," Stellan sanoi. Ravitsemusterapeutti Sari Sieni kommentoi: "Tämä on huolestuttavaa."</p>
+              <div class="card-meta">3 tuntia sitten &nbsp;•&nbsp; Viihdeuutiset</div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 9: Viihde -->
+          <div class="card">
+            <div class="card-body">
+              <h2>Milla Alftan: "Avioero" — näyttelijä avautuu ensimmäistä kertaa hankalista vuodista</h2>
+              <p>Milla Alftan on vahvistanut eronneensa puolisoaan. "Olemme eläneet erillään, koska hän asuu Helsingissä ja minä Tampereella," Alftan sanoi. "Etäisyys on tehnyt meistä vahvempia."</p>
+              <div class="card-meta">8 tuntia sitten &nbsp;•&nbsp; Viihde</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TERVEYS ===== -->
+      <section class="section-block" id="terveys">
+        <div class="section-header">
+          <span class="section-badge badge-terveys">Terveys</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/health_warning.svg" alt="Varoitus: Nämä oireet -infografiikka" class="hero-img">
+          <div class="hero-body">
+            <h1>VAROITUS: Nämä oireet voivat tarkoittaa, että olet liian suomalainen — lääkärit hämmentyneitä</h1>
+            <p class="hero-teaser">
+              Tapahtuma.fi:n tutkimus on paljastanut järkyttävän totuuden: 78 % suomalaisista kärsii
+              "Perkele-oireyhtymästä", joka aiheuttaa äkillistä vihastumista, kun joku sanoo "tervetuloa".
+              "Tämä on pysäyttävä diagnoosi," sanoi professori Juhani Perkele.
+            </p>
+            <div class="hero-meta">Päivitetty 45 min sitten &nbsp;|&nbsp; Terveys &nbsp;|&nbsp; Kirjoittanut: Dosentti Dina Diagnoosi</div>
+          </div>
+        </div>
+
+        <!-- ARTICLE 11: Terveys -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Outo oire jalassa oli ensimmäinen merkki — lääkäri löysi jalkapallomailan</h2>
+              <p>Mies, 42, haki apua jalkakivun vuoksi. Lääkäri yllättyi, kun röntgenkuvasta ilmestyi jalkapallomaila. "Oletko sä lyönyt itsellesi mailan jalkaan?" lääkäri kysyi. "Ei, mä olin saanut sen lahjaksi," mies vastasi.</p>
+              <div class="card-meta">7 tuntia sitten &nbsp;•&nbsp; Terveys</div>
+            </div>
+          </div>
+
+          <!-- ARTICLE 12: Terveys -->
+          <div class="card">
+            <div class="card-body">
+              <h2>Näin tunnistat someriippuvuuden — jos luet tätä artikkelia, olet jo liian myöhässä</h2>
+              <p>Asiantuntijat varoittavat: jos luet tätä artikkelia, olet jo liian myöhässä. "Someriippuvuus on vakava ongelma," sanoi psykologi Sari Sieni. "Mutta älä huolehdi, tässä on 10 vinkkiä, jotka eivät auta."</p>
+              <div class="card-meta">9 tuntia sitten &nbsp;•&nbsp; Terveys</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TALOUS ===== -->
+      <section class="section-block" id="talous">
+        <div class="section-header">
+          <span class="section-badge badge-talous">Talous</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/housing_prices.svg" alt="Asuntohinnat Suomessa -infografiikka" class="hero-img">
+          <div class="hero-body">
+            <h1>Tämä muutos iskee nyt asuntojen omistajiin — "Käteen jäävä rahamäärä on nolla"</h1>
+            <p class="hero-teaser">
+              Iltajupinatin tutkimus on paljastanut, että asunnot voivat maksaa vuonna 2030 peräti 5 miljoonaa euroa.
+              "Miksi hinta nousee? Koska nousee," sanoi asiantuntija Jussi Jupinala.
+              "Käteen jäävä rahamäärä on nolla, koska kaikki menee asuntoon."
+            </p>
+            <div class="hero-meta">Päivitetty 20 min sitten &nbsp;|&nbsp; Talous &nbsp;|&nbsp; Kirjoittanut: Eino Elokuu</div>
+          </div>
+        </div>
+
+        <!-- ARTICLE 14: Talous -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>POMMI: Suomalainen säästi 300 000 € ostamalla vain leipää — "Enkä minä tehnytkään muuta"</h2>
+              <p>Mies, 67, on säästänyt 300 000 euroa ostamalla vain leipää. "Enkä minä tehnytkään muuta," mies sanoi. "Mutta mä ostan leipää joka päivä, ja se on kyllä kallis."</p>
+              <div class="card-meta">4 tuntia sitten &nbsp;•&nbsp; Kuluttaja</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SÄÄ ===== -->
+      <section class="section-block" id="saa">
+        <div class="section-header">
+          <span class="section-badge badge-saa">Sää</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/weather_map.svg" alt="Huominen Suomessa -sääennuste" class="hero-img">
+          <div class="hero-body">
+            <h1>DRAAMAATTINEN SÄÄENNUSTE: Huomenna Suomessa voi sataa karkkia — "En ole koskaan nähnyt näin hullua säätä"</h1>
+            <p class="hero-teaser">
+              Ilmatieteen laitos on julkaissut järkyttävän sään ennusteen: Lappiin saattaa tulla lunta +42 asteen lämmössä,
+              kun taas Oulussa savusumu saattaa nousta +99 asteeseen. "Tämä on käsittämätöntä," sanoi säätieteilijä
+              Kalle Kuulo. "Mutta mä en usko siihen."
+            </p>
+            <div class="hero-meta">Päivitetty 15 min sitten &nbsp;|&nbsp; Sää &nbsp;|&nbsp; Kirjoittanut: Tuuli Tuulinen</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RUOKA ===== -->
+      <section class="section-block" id="ruoka">
+        <div class="section-header">
+          <span class="section-badge badge-ruoka">Ruoka</span>
+        </div>
+
+        <div class="hero-card">
+          <img src="img/food_compare.svg" alt="Kotikatsa vs Ravintolat -vertailu" class="hero-img">
+          <div class="hero-body">
+            <h1>YLLÄTYS: Kotikatsa on ravintoloita 9 kertaa halvampi ja 5 kertaa herkullisempi — "Tämä on shokki"</h1>
+            <p class="hero-teaser">
+              Iltajupinatin tutkimus on paljastanut järkyttävän totuuden: kotikatsa on ravintoloita 9 kertaa halvampi
+              ja 5 kertaa herkullisempi. "Kotikatsa maksoi vain 5 euroa, kun taas ravintola maksoi 45 euroa,"
+              sanoi tutkija Sari Sieni. "Ja kotikatsa maistui paremmalta."
+            </p>
+            <div class="hero-meta">Päivitetty 1 tunti sitten &nbsp;|&nbsp; Ruoka &nbsp;|&nbsp; Kirjoittanut: Maito Maija</div>
+          </div>
+        </div>
+
+        <!-- ARTICLE 17: Ruoka -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Vuoden ruokalähettiläiden hurmaavan helppo resepti — "Vain vettä ja suolaa, ja se on kyllä kylläistä"</h2>
+              <p>Vuoden ruokalähettiläät ovat paljastaneet hurmaavan helpon reseptin: vain vettä ja suolaa. "Tämä on tämän kesän hitti," sanoi lähettiläs Jussi Jupinala. "Ja se on kyllä kylläistä."</p>
+              <div class="card-meta">6 tuntia sitten &nbsp;•&nbsp; Ruoka</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MATKAILU ===== -->
+      <section class="section-block" id="matkailu">
+        <div class="section-header">
+          <span class="section-badge badge-matkailu">Matkailu</span>
+        </div>
+
+        <!-- ARTICLE 18: Matkailu -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Nämä ovat maailman 10 outointa matkailukohdetta — yksi on mökki Saimaalla, jossa ei ole mitään</h2>
+              <p>Iltajupinatin matkatoimittaja on käynyt maailman outoimmilla paikoilla. Ykköseksi nousi mökki Saimaalla, jossa ei ole mitään. "Se on kyllä kallis," sanoi toimittaja. "Mutta mä olin siellä."</p>
+              <div class="card-meta">8 tuntia sitten &nbsp;•&nbsp; Matkailu</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AUTOT ===== -->
+      <section class="section-block" id="autot">
+        <div class="section-header">
+          <span class="section-badge badge-autot">Autot</span>
+        </div>
+
+        <!-- ARTICLE 19: Autot -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Mopo räjähti Kuopiossa — "Se oli kyllä iso räjähdys, mutta mä olin kyllä valmis"</h2>
+              <p>Mopo on räjähtänyt Kuopiossa, ja poliisi etsii syyllistä. "Se oli kyllä iso räjähdys," sanoi silminnäkijä. "Mutta mä olin kyllä valmis. Olin kuullut, että mopo voi räjähtää."</p>
+              <div class="card-meta">5 tuntia sitten &nbsp;•&nbsp; Autot</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h2>Britannian kuningatar osti Volvo XC90:n — "Se on kyllä turvallinen, mutta mä olin kyllä valmis"</h2>
+              <p>Britannian kuningatar on ostanut Volvo XC90:n. "Se on kyllä turvallinen," kuningatar sanoi. "Mutta mä olin kyllä valmis. Olin kuullut, että Volvo on turvallinen."</p>
+              <div class="card-meta">7 tuntia sitten &nbsp;•&nbsp; Autot</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TYYLI ===== -->
+      <section class="section-block" id="tyyli">
+        <div class="section-header">
+          <span class="section-badge badge-tyyli">Tyyli</span>
+        </div>
+
+        <!-- ARTICLE 20: Tyyli -->
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-body">
+              <h2>Mitä päälle kesän juhliin? Tässä 3 täydellistä mekkoa — löytyvät lähimarketista, jos etsit tarpeeksi kauan</h2>
+              <p>Iltajupinatin tyyli-toimittaja on etsinyt kolme täydellistä mekkoa kesän juhliin. "Löysin ne lähimarketista," sanoi toimittaja. "Mutta mä etsin kyllä pitkään."</p>
+              <div class="card-meta">10 tuntia sitten &nbsp;•&nbsp; Tyyli</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div> <!-- /content-main -->
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+
+      <!-- SIDEBAR: Drinking stats -->
+      <div class="sidebar-card">
+        <h3>PALJASTUS: Mitä suomalaiset oikeasti juovat?</h3>
+        <p>Iltajupinatin tutkimus on paljastanut, että 45 % suomalaisista juo olutta, 25 % vodkaa ja vain 5 % vettä. "Tämä on shokki," sanoi tutkija Jussi Jupinala.</p>
+        <img src="img/drinking_stats.svg" alt="Mitä suomalaiset juovat -infografiikka" style="margin-top:10px; border-radius:4px; width:100%; height:auto;">
+      </div>
+
+      <!-- SIDEBAR: Horoscope -->
+      <div class="sidebar-card">
+        <h3>🔮 Horoskooppi tänään</h3>
+        <p><strong>Asiakas:</strong> Sinulla on tänään onni puolellasi — jos et mene mihinkään.</p>
+        <p><strong>Skorpioni:</strong> Sinulla on tänään onni puolellasi — jos et puhu kenellekään.</p>
+        <p><strong>Vaaka:</strong> Sinulla on tänään onni puolellasi — jos et tee mitään.</p>
+        <p><strong>Kaikki muut:</strong> Sinulla on tänään onni puolellasi — jos et lue tätä horoskooppia.</p>
+      </div>
+
+      <!-- SIDEBAR: Quick facts -->
+      <div class="sidebar-card">
+        <h3>⚡ Iltajupinatin pikaviestit</h3>
+        <p>• Mikkeli: Kettu ryösti kirkonkellon</p>
+        <p>• Porvoo: Sataa pullaa — "En ole nähnyt näin kauan"</p>
+        <p>• Tampere: Jääkiekkoilija syö pullaa — "Se on kyllä hyvää"</p>
+        <p>• Helsinki: Pääministeri unohti sanakirjan</p>
+        <p>• Oulu: Savusumu peittää kaupungin — "En näe mitään"</p>
+      </div>
+
+      <!-- POLL -->
+      <div class="poll-box">
+        <h3>📊 Mitä mieltä olet Iltajupinatin uutisoinnista?</h3>
+        <button>🔥 Täysin pakottavaa</button>
+        <button>😐 Ei tosi, ei välttämätöntä</button>
+        <button>😂 Naurattaa, mutta ei auta</button>
+        <button>🤔 En tiedä, mä olin vain lukemassa</button>
+      </div>
+
+      <!-- SIDEBAR: Trending -->
+      <div class="sidebar-card">
+        <h3>🔥 Trendää nyt</h3>
+        <p>1. <strong>#PullaOnVoiVoileipä</strong> — 12K tweetiä</p>
+        <p>2. <strong>#KettuKirkonkello</strong> — 8K tweetiä</p>
+        <p>3. <strong>#SaunaOnElämä</strong> — 5K tweetiä</p>
+        <p>4. <strong>#PerkeleOireyhtymä</strong> — 3K tweetiä</p>
+        <p>5. <strong>#MökilläEiMitään</strong> — 2K tweetiä</p>
+      </div>
+
+    </aside>
+  </div> <!-- /main-layout -->
+
+</div> <!-- /container -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <strong>ILTAJUPINAT</strong> — Suomen meluisin uutismedia<br>
+  © 2025 Iltajupinat Oy. Kaikki oikeudet pidätetään, mutta mikään ei ole tosi.<br>
+  Toimitus: toimitus@iltajupinat.fi &nbsp;|&nbsp; Päätoimittaja: Jussi Jupinala<br>
+  <br>
+  <em>Tämä on satirinen mockup. Kaikki jutut, nimet, tilastot ja asiantuntijat ovat keksittyjä.</em><br>
+  <em>Inspired by Iltalehti &amp; Ilta-Sanomat tabloid conventions.</em>
+</footer>
+
+</body>
+</html>

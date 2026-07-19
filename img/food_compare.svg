@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@700&amp;display=swap');
+      .title { font-family: Anton, Impact, 'Arial Black', sans-serif; font-size: 38px; fill: #FFEB00; }
+      .subtitle { font-family: Oswald, 'Arial Black', sans-serif; font-size: 16px; fill: #FFEB00; }
+      .yllatys { font-family: Anton, Impact, 'Arial Black', sans-serif; font-size: 28px; fill: #FFFFFF; }
+      .label { font-family: Oswald, 'Arial Black', sans-serif; font-size: 13px; fill: #FFFFFF; }
+      .value-big { font-family: Anton, Impact, 'Arial Black', sans-serif; font-size: 52px; }
+      .value-med { font-family: Anton, Impact, 'Arial Black', sans-serif; font-size: 28px; }
+      .green-text { fill: #6AB283; }
+      .red-text { fill: #DC0000; }
+      .white-text { fill: #FFFFFF; }
+      .yellow-text { fill: #FFEB00; }
+    </style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="yllatysGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFEB00"/>
+      <stop offset="50%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#FFEB00"/>
+    </linearGradient>
+    <linearGradient id="kotikatsaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6AB283"/>
+      <stop offset="100%" stop-color="#4a8a63"/>
+    </linearGradient>
+    <linearGradient id="ravintolaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DC0000"/>
+      <stop offset="100%" stop-color="#a00000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)" rx="8"/>
+  <rect x="2" y="2" width="596" height="396" fill="none" stroke="#DC0000" stroke-width="4" rx="8"/>
+
+  <!-- Decorative corner stars -->
+  <polygon points="10,40 18,25 22,38 35,38 24,48 28,60 18,52 8,62 12,50 2,48" fill="#FFEB00" opacity="0.6"/>
+  <polygon points="590,40 582,25 578,38 565,38 576,48 572,60 582,52 592,62 588,50 598,48" fill="#FFEB00" opacity="0.6"/>
+
+  <!-- ===== YLLATYS! Badge ===== -->
+  <g transform="translate(300, 30)" filter="url(#glow)">
+    <polygon points="0,-22 18,-8 18,8 0,22 -18,8 -18,-8" fill="#FFEB00" stroke="#000" stroke-width="2"/>
+    <text class="yllatys" text-anchor="middle" y="6">YLLÄTYS!</text>
+  </g>
+
+  <!-- ===== Main Title ===== -->
+  <text class="title" text-anchor="middle" x="300" y="80" filter="url(#shadow)">KOTIKATSA vs. RAVINTOLAT</text>
+  <text class="subtitle" text-anchor="middle" x="300" y="100">Katso ja ihmettele!</text>
+
+  <!-- Divider line under title -->
+  <line x1="60" y1="110" x2="540" y2="110" stroke="#FFEB00" stroke-width="2"/>
+  <line x1="60" y1="114" x2="540" y2="114" stroke="#DC0000" stroke-width="1"/>
+
+  <!-- ===== LEFT PANEL: Kotikatsa ===== -->
+  <g transform="translate(30, 130)">
+    <rect x="0" y="0" width="250" height="240" rx="10" fill="#1a1a1a" stroke="#6AB283" stroke-width="3"/>
+    <!-- Panel header -->
+    <rect x="0" y="0" width="250" height="38" rx="10" fill="url(#kotikatsaGrad)"/>
+    <rect x="0" y="18" width="250" height="20" fill="url(#kotikatsaGrad)"/>
+    <text x="125" y="26" text-anchor="middle" class="value-med white-text">🍳 KOTIKATSA</text>
+
+    <!-- Hinta row -->
+    <text x="15" y="70" class="label">HINTA</text>
+    <text x="15" y="115" class="value-big green-text" text-anchor="middle">5 €</text>
+    <!-- Smiley face -->
+    <g transform="translate(180, 85)">
+      <circle cx="0" cy="0" r="22" fill="#FFEB00" stroke="#000" stroke-width="1.5"/>
+      <circle cx="-7" cy="-5" r="3" fill="#000"/>
+      <circle cx="7" cy="-5" r="3" fill="#000"/>
+      <path d="M-10,4 Q0,16 10,4" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Laatu row -->
+    <line x1="15" y1="135" x2="235" y2="135" stroke="#6AB283" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="15" y="155" class="label">LAATU</text>
+    <text x="15" y="185" class="value-med green-text">KOTIKATSA: 10/10</text>
+    <!-- Stars -->
+    <text x="180" y="182" font-size="18" fill="#FFEB00">★★★★★</text>
+
+    <!-- Kylläisyys row -->
+    <line x1="15" y1="200" x2="235" y2="200" stroke="#6AB283" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="15" y="218" class="label">KYLLÄISYYS</text>
+    <text x="15" y="235" class="value-med green-text">3 h</text>
+  </g>
+
+  <!-- ===== RIGHT PANEL: Ravintola ===== -->
+  <g transform="translate(320, 130)">
+    <rect x="0" y="0" width="250" height="240" rx="10" fill="#1a1a1a" stroke="#DC0000" stroke-width="3"/>
+    <!-- Panel header -->
+    <rect x="0" y="0" width="250" height="38" rx="10" fill="url(#ravintolaGrad)"/>
+    <rect x="0" y="18" width="250" height="20" fill="url(#ravintolaGrad)"/>
+    <text x="125" y="26" text-anchor="middle" class="value-med white-text">🍽️ RAVINTOLA</text>
+
+    <!-- Hinta row -->
+    <text x="15" y="70" class="label">HINTA</text>
+    <text x="15" y="115" class="value-big red-text" text-anchor="middle">45 €</text>
+    <!-- Shocked face -->
+    <g transform="translate(180, 85)">
+      <circle cx="0" cy="0" r="22" fill="#FFEB00" stroke="#000" stroke-width="1.5"/>
+      <circle cx="-7" cy="-5" r="3" fill="#000"/>
+      <circle cx="7" cy="-5" r="3" fill="#000"/>
+      <ellipse cx="0" cy="10" rx="6" ry="8" fill="#000"/>
+      <!-- Eyebrows raised -->
+      <line x1="-11" y1="-13" x2="-4" y2="-11" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+      <line x1="11" y1="-13" x2="4" y2="-11" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Laatu row -->
+    <line x1="15" y1="135" x2="235" y2="135" stroke="#DC0000" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="15" y="155" class="label">LAATU</text>
+    <text x="15" y="185" class="value-med red-text">RAVINTOLA: 2/10</text>
+    <!-- Stars -->
+    <text x="180" y="182" font-size="18" fill="#666">★☆☆☆☆</text>
+
+    <!-- Kylläisyys row -->
+    <line x1="15" y1="200" x2="235" y2="200" stroke="#DC0000" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="15" y="218" class="label">KYLLÄISYYS</text>
+    <text x="15" y="235" class="value-med red-text">15 min</text>
+  </g>
+
+  <!-- ===== VS lightning bolt between panels ===== -->
+  <g transform="translate(300, 250)" filter="url(#glow)">
+    <polygon points="-8,-25 8,-10 -4,-10 12,25 -6,8 6,8" fill="#FFEB00" stroke="#000" stroke-width="1"/>
+  </g>
+
+  <!-- ===== Bottom banner ===== -->
+  <rect x="30" y="380" width="540" height="14" rx="4" fill="#DC0000"/>
+  <text x="300" y="391" text-anchor="middle" font-family="Oswald, 'Arial Black', sans-serif" font-size="10" fill="#FFFFFF" letter-spacing="2">LÄHDE: Iltajupinat tutkimus 2025 — TULOKSET YLLÄTTÄVÄT!</text>
+</svg>

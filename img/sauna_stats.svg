@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap');
+      .title { font-family: Impact, 'Arial Black', sans-serif; font-size: 32px; fill: #FFEB00; }
+      .shokki { font-family: Impact, 'Arial Black', sans-serif; font-size: 48px; fill: #FFEB00; }
+      .label { font-family: Impact, 'Arial Black', sans-serif; font-size: 16px; fill: #FFFFFF; }
+      .value { font-family: Impact, 'Arial Black', sans-serif; font-size: 18px; fill: #FFFFFF; }
+      .disclaimer { font-family: Arial, Helvetica, sans-serif; font-size: 10px; fill: #AAAAAA; }
+    </style>
+    <filter id="glow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#DC0000" flood-opacity="0.8" result="glowColor"/>
+      <feComposite in="glowColor" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF1A1A"/>
+      <stop offset="100%" stop-color="#DC0000"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Yellow top accent bar -->
+  <rect x="0" y="0" width="600" height="8" fill="#FFEB00"/>
+
+  <!-- SHOKKI! label - top right -->
+  <g transform="translate(440, 30)" filter="url(#glow)">
+    <rect x="0" y="0" width="130" height="50" rx="5" fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
+    <text x="65" y="35" text-anchor="middle" class="shokki">SHOKKI!</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="300" y="55" text-anchor="middle" class="title" filter="url(#glow)">SAUNOIHIN KUOLLEET 2024</text>
+  <line x1="30" y1="68" x2="400" y2="68" stroke="#FFEB00" stroke-width="3"/>
+
+  <!-- Chart area -->
+  <g transform="translate(160, 90)">
+
+    <!-- Bar 1: Yksinäiset miehet - 347 -->
+    <text x="0" y="20" class="label">Yksinäiset miehet</text>
+    <rect x="160" y="6" width="300" height="28" rx="2" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="468" y="26" class="value">347</text>
+
+    <!-- Bar 2: Humalassa - 189 -->
+    <text x="0" y="60" class="label">Humalassa</text>
+    <rect x="160" y="46" width="163" height="28" rx="2" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="331" y="66" class="value">189</text>
+
+    <!-- Bar 3: Kotieläimet - 12 -->
+    <text x="0" y="100" class="label">Kotieläimet</text>
+    <rect x="160" y="86" width="10" height="28" rx="2" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="178" y="106" class="value">12</text>
+
+    <!-- Bar 4: Saunavieraita - 3 -->
+    <text x="0" y="140" class="label">Saunavieraita</text>
+    <rect x="160" y="126" width="3" height="28" rx="1" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="171" y="146" class="value">3</text>
+
+    <!-- Bar 5: Saunomatta kuolleet - 0 -->
+    <text x="0" y="180" class="label">Saunomatta kuolleet</text>
+    <rect x="160" y="166" width="0" height="28" rx="0" fill="url(#barGrad)" stroke="#FFEB00" stroke-width="1"/>
+    <text x="168" y="186" class="value" fill="#FFEB00" font-size="28" font-weight="bold">0</text>
+
+  </g>
+
+  <!-- Yellow bottom accent bar -->
+  <rect x="0" y="380" width="600" height="8" fill="#FFEB00"/>
+
+  <!-- Disclaimer -->
+  <text x="300" y="396" text-anchor="middle" class="disclaimer">Lähteet: Täysin keksittyjä lukuja</text>
+
+</svg>

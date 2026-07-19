@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap');
+      .title { font-family: Impact, 'Arial Black', sans-serif; font-size: 28px; font-weight: 700; fill: #FFEB00; text-anchor: middle; letter-spacing: 2px; }
+      .paljastus { font-family: Impact, 'Arial Black', sans-serif; font-size: 34px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .label { font-family: 'Arial Black', Impact, sans-serif; font-size: 14px; font-weight: 700; fill: #FFFFFF; }
+      .legend-label { font-family: 'Arial Black', Impact, sans-serif; font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+      .legend-pct { font-family: 'Arial Black', Impact, sans-serif; font-size: 13px; font-weight: 700; fill: #FFEB00; }
+      .source { font-family: 'Arial', sans-serif; font-size: 11px; fill: #AAAAAA; text-anchor: middle; font-style: italic; }
+      .dramatic-line { stroke: #FFEB00; stroke-width: 2; }
+    </style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2A0A0A"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bgGrad)" rx="8"/>
+
+  <!-- Red border frame -->
+  <rect x="4" y="4" width="492" height="492" rx="6" fill="none" stroke="#DC0000" stroke-width="4"/>
+  <rect x="10" y="10" width="480" height="480" rx="4" fill="none" stroke="#FFEB00" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Corner accents -->
+  <polygon points="14,40 14,14 40,14" fill="#DC0000"/>
+  <polygon points="486,40 486,14 460,14" fill="#DC0000"/>
+  <polygon points="14,460 14,486 40,486" fill="#DC0000"/>
+  <polygon points="486,460 486,486 460,486" fill="#DC0000"/>
+
+  <!-- PALJASTUS! banner -->
+  <g filter="url(#shadow)">
+    <rect x="105" y="12" width="290" height="38" rx="4" fill="#DC0000" stroke="#FFEB00" stroke-width="2"/>
+    <text class="paljastus" x="250" y="39" filter="url(#glow)">⚡ PALJASTUS! ⚡</text>
+  </g>
+
+  <!-- Title -->
+  <text class="title" x="250" y="72" filter="url(#shadow)">MITÄ SUOMALAISET</text>
+  <text class="title" x="250" y="102" filter="url(#shadow)">JUOVAT?</text>
+
+  <!-- Dramatic underline -->
+  <line x1="120" y1="112" x2="380" y2="112" class="dramatic-line"/>
+
+  <!-- Pie chart center: cx=250, cy=240, r=120 -->
+  <!-- 
+    Angles (degrees from top, clockwise):
+    Olut:    45% = 162°  ->  0°  to 162°
+    Vodka:   25% =  90°  -> 162° to 252°
+    Mehuke:  15% =  54°  -> 252° to 306°
+    Kahvi:   10% =  36°  -> 306° to 342°
+    Vesi:     5% =  18°  -> 342° to 360°
+    Muuta:    0% =   0°  -> (not drawn)
+  -->
+
+  <!-- Olut 45%: 0° to 162° (red) -->
+  <path d="M250,240 L250,120 A120,120 0 1,1 195.71,343.29 Z" fill="#DC0000" stroke="#1A1A1A" stroke-width="2"/>
+
+  <!-- Vodka 25%: 162° to 252° (dark red) -->
+  <path d="M250,240 L195.71,343.29 A120,120 0 0,1 162.21,189.05 Z" fill="#8B0000" stroke="#1A1A1A" stroke-width="2"/>
+
+  <!-- Mehuke 15%: 252° to 306° (orange) -->
+  <path d="M250,240 L162.21,189.05 A120,120 0 0,1 217.84,132.36 Z" fill="#E8750A" stroke="#1A1A1A" stroke-width="2"/>
+
+  <!-- Kahvi 10%: 306° to 342° (brown) -->
+  <path d="M250,240 L217.84,132.36 A120,120 0 0,1 334.84,192.76 Z" fill="#6B3A1F" stroke="#1A1A1A" stroke-width="2"/>
+
+  <!-- Vesi 5%: 342° to 360° (blue) -->
+  <path d="M250,240 L334.84,192.76 A120,120 0 0,1 250,120 Z" fill="#2E5EAA" stroke="#1A1A1A" stroke-width="2"/>
+
+  <!-- Pie center hole for donut effect -->
+  <circle cx="250" cy="240" r="40" fill="#1A0A0A" stroke="#FFEB00" stroke-width="2"/>
+  <text x="250" y="236" text-anchor="middle" font-family="Impact, sans-serif" font-size="16" font-weight="700" fill="#FFEB00">100%</text>
+  <text x="250" y="254" text-anchor="middle" font-family="Impact, sans-serif" font-size="11" font-weight="700" fill="#DC0000">JUOMAA</text>
+
+  <!-- Slice labels with leader lines -->
+  <!-- Olut label (right side, ~81°) -->
+  <line x1="354" y1="240" x2="400" y2="240" stroke="#DC0000" stroke-width="1.5"/>
+  <rect x="400" y="228" width="80" height="24" rx="3" fill="#1A1A1A" stroke="#DC0000" stroke-width="1"/>
+  <text class="legend-label" x="406" y="244">Olut</text>
+  <text class="legend-pct" x="470" y="244" text-anchor="end">45%</text>
+
+  <!-- Vodka label (bottom-left, ~207°) -->
+  <line x1="167" y1="315" x2="120" y2="330" stroke="#8B0000" stroke-width="1.5"/>
+  <rect x="20" y="318" width="80" height="24" rx="3" fill="#1A1A1A" stroke="#8B0000" stroke-width="1"/>
+  <text class="legend-label" x="26" y="334">Vodka</text>
+  <text class="legend-pct" x="90" y="334" text-anchor="end">25%</text>
+
+  <!-- Mehuke label (bottom-left, ~279°) -->
+  <line x1="170" y1="180" x2="120" y2="175" stroke="#E8750A" stroke-width="1.5"/>
+  <rect x="20" y="163" width="80" height="24" rx="3" fill="#1A1A1A" stroke="#E8750A" stroke-width="1"/>
+  <text class="legend-label" x="26" y="179">Mehuke</text>
+  <text class="legend-pct" x="90" y="179" text-anchor="end">15%</text>
+
+  <!-- Kahvi label (top-right, ~324°) -->
+  <line x1="340" y1="150" x2="390" y2="130" stroke="#6B3A1F" stroke-width="1.5"/>
+  <rect x="390" y="118" width="80" height="24" rx="3" fill="#1A1A1A" stroke="#6B3A1F" stroke-width="1"/>
+  <text class="legend-label" x="396" y="134">Kahvi</text>
+  <text class="legend-pct" x="464" y="134" text-anchor="end">10%</text>
+
+  <!-- Vesi label (top, ~351°) -->
+  <line x1="290" y1="125" x2="330" y2="100" stroke="#2E5EAA" stroke-width="1.5"/>
+  <rect x="330" y="88" width="65" height="24" rx="3" fill="#1A1A1A" stroke="#2E5EAA" stroke-width="1"/>
+  <text class="legend-label" x="336" y="104">Vesi</text>
+  <text class="legend-pct" x="389" y="104" text-anchor="end">5%</text>
+
+  <!-- Muuta 0% - special callout -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="380" width="220" height="28" rx="4" fill="#333333" stroke="#888888" stroke-width="1"/>
+    <text class="legend-label" x="250" y="399" text-anchor="middle" fill="#888888">Muuta: 0% ...ei yllätys</text>
+  </g>
+
+  <!-- Dramatic bottom accent line -->
+  <line x1="60" y1="420" x2="440" y2="420" stroke="#DC0000" stroke-width="2"/>
+
+  <!-- Source -->
+  <text class="source" x="250" y="448">Lähde: Täysin keksityt tilastot</text>
+
+  <!-- Tabloid-style starburst decorations -->
+  <g transform="translate(42, 60)" fill="#DC0000" opacity="0.6">
+    <polygon points="0,-15 4,-5 15,-5 6,2 10,12 0,6 -10,12 -6,2 -15,-5 -4,-5"/>
+  </g>
+  <g transform="translate(458, 60)" fill="#DC0000" opacity="0.6">
+    <polygon points="0,-15 4,-5 15,-5 6,2 10,12 0,6 -10,12 -6,2 -15,-5 -4,-5"/>
+  </g>
+</svg>
